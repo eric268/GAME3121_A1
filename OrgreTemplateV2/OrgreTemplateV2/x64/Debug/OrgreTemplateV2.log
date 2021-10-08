@@ -1,4 +1,4 @@
-﻿  Week3-7-InteractiveAnimationDemo.cpp
+﻿  Main.cpp
 C:\GameEngineDevelopment\ogre-sdk-v2.1\OgreMain\Include\OgreAxisAlignedBox.h(66,17): warning C4251: 'Ogre::AxisAlignedBox::mMinimum': class 'Ogre::Vector<3,Ogre::Real>' needs to have dll-interface to be used by clients of class 'Ogre::AxisAlignedBox'
 C:\GameEngineDevelopment\ogre-sdk-v2.1\OgreMain\Include\OgrePrerequisites.h(254): message : see declaration of 'Ogre::Vector<3,Ogre::Real>'
 C:\GameEngineDevelopment\ogre-sdk-v2.1\OgreMain\Include\OgreAxisAlignedBox.h(67,17): warning C4251: 'Ogre::AxisAlignedBox::mMaximum': class 'Ogre::Vector<3,Ogre::Real>' needs to have dll-interface to be used by clients of class 'Ogre::AxisAlignedBox'
@@ -392,4 +392,4 @@ C:\GameEngineDevelopment\ogre-sdk-v2.1\Components\Bites\Include\OgreApplicationC
 C:\GameEngineDevelopment\ogre-sdk-v2.1\Components\Bites\Include\OgreApplicationContextBase.h(291): message : see declaration of 'std::vector<OgreBites::NativeWindowPair,std::allocator<OgreBites::NativeWindowPair>>'
 C:\GameEngineDevelopment\ogre-sdk-v2.1\Components\Bites\Include\OgreApplicationContextBase.h(295,27): warning C4251: 'OgreBites::ApplicationContextBase::mInputListeners': class 'std::set<std::pair<uint32_t,OgreBites::InputListener *>,std::less<std::pair<uint32_t,OgreBites::InputListener *>>,std::allocator<std::pair<uint32_t,OgreBites::InputListener *>>>' needs to have dll-interface to be used by clients of class 'OgreBites::ApplicationContextBase'
 C:\GameEngineDevelopment\ogre-sdk-v2.1\Components\Bites\Include\OgreApplicationContextBase.h(294): message : see declaration of 'std::set<std::pair<uint32_t,OgreBites::InputListener *>,std::less<std::pair<uint32_t,OgreBites::InputListener *>>,std::allocator<std::pair<uint32_t,OgreBites::InputListener *>>>'
-  OrgreTemplateV2.vcxproj -> C:\GameEngineDevelopment\OrgreTemplateV2\OrgreTemplateV2\x64\Debug\OrgreTemplateV2.exe
+  OrgreTemplateV2.vcxproj -> D:\Game Programming F2021\Game Engine Development\A1\GAME3121_A1\OrgreTemplateV2\OrgreTemplateV2\x64\Debug\OrgreTemplateV2.exe
