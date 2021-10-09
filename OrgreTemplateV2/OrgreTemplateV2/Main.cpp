@@ -9,7 +9,8 @@
 #include "OgreInput.h"
 #include "OgreRTShaderSystem.h"
 #include <iostream>
-#include "Player1.h"
+#include "PongBall.h"
+#include "PongPaddle.h"
 
 using namespace Ogre;
 using namespace OgreBites;
@@ -19,7 +20,9 @@ class OgreTutorial
 	, public InputListener
 {
 private:
-	Player1* player1Pong;
+	PongPaddle* m_player1Pong;
+	PongBall*   m_ball;
+
 	SceneManager* scnMgr;
 	Root* root;
 public:
@@ -68,10 +71,10 @@ bool OgreTutorial::keyReleased(const KeyboardEvent& evt)
 	switch (evt.keysym.sym)
 	{
 	case 'w':
-		player1Pong->SetVelocity(Ogre::Vector3(0, 0, 0));
+		m_player1Pong->SetVelocity(Ogre::Vector3(0, 0, 0));
 		break;
 	case 's':
-		player1Pong->SetVelocity(Ogre::Vector3(0, 0, 0));
+		m_player1Pong->SetVelocity(Ogre::Vector3(0, 0, 0));
 		break;
 	default:
 		break;
@@ -87,10 +90,10 @@ bool OgreTutorial::keyPressed(const KeyboardEvent& evt)
 		getRoot()->queueEndRendering();
 		break;
 	case 'w':
-		player1Pong->SetVelocity(Ogre::Vector3(0,0,-player1Pong->GetPaddleSpeed()));
+		m_player1Pong->SetVelocity(Ogre::Vector3(0,0,-m_player1Pong->GetSpeed()));
 		break;
 	case 's':
-		player1Pong->SetVelocity(Ogre::Vector3(0, 0, player1Pong->GetPaddleSpeed()));
+		m_player1Pong->SetVelocity(Ogre::Vector3(0, 0, m_player1Pong->GetSpeed()));
 		break;
 	default:
 		break;
@@ -163,7 +166,8 @@ void OgreTutorial::createScene()
 	SinbadNode->setScale(3.0f, 3.0f, 3.0f);
 	*/
 
-	player1Pong = new Player1(scnMgr->createSceneNode("Player1"), scnMgr->createEntity("Player1Entity", "cube.mesh"),scnMgr);
+	m_player1Pong = new PongPaddle(scnMgr->createSceneNode("Player1"),scnMgr);
+	m_ball = new PongBall(scnMgr->createSceneNode("Ball"), scnMgr);
 }
 
 void OgreTutorial::createCamera()
@@ -189,9 +193,11 @@ void OgreTutorial::createCamera()
 
 void OgreTutorial::createFrameListener()
 {
-	Ogre::FrameListener* P1FrameListener = player1Pong;
+	Ogre::FrameListener* P1FrameListener =  m_player1Pong;
+	Ogre::FrameListener* BallFrameListener = m_ball;
 
 	mRoot->addFrameListener(P1FrameListener);
+	mRoot->addFrameListener(m_ball);
 }
 
 int main(int argc, char** argv)
