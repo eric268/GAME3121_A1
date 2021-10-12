@@ -39,7 +39,7 @@ public:
 
 
 OgreTutorial::OgreTutorial()
-	: ApplicationContext("week3-7-InteractiveAnimationDemo")
+	: ApplicationContext("Assignment 1 Eric Galway 101252535 Pong Game")
 {
 }
 
@@ -112,7 +112,7 @@ void OgreTutorial::createScene()
 	scnMgr->setShadowTechnique(ShadowTechnique::SHADOWTYPE_STENCIL_ADDITIVE);
 
 	//! [turn lights]
-	scnMgr->setAmbientLight(ColourValue(0.5, 0.5, 0.5));
+	scnMgr->setAmbientLight(ColourValue(0.0, 0.0, 0.0));
 	//! [turn lights]
 
  //! [new light]
@@ -165,7 +165,7 @@ void OgreTutorial::createScene()
 	SinbadNode->setPosition(Ogre::Vector3(0.0f, 4.0f, 0.0f));
 	SinbadNode->setScale(3.0f, 3.0f, 3.0f);
 	*/
-
+	
 	m_player1Pong = new PongPaddle(scnMgr->createSceneNode("Player1"),scnMgr);
 	m_ball = new PongBall(scnMgr->createSceneNode("Ball"), scnMgr);
 }
@@ -197,7 +197,7 @@ void OgreTutorial::createFrameListener()
 	Ogre::FrameListener* BallFrameListener = m_ball;
 
 	mRoot->addFrameListener(P1FrameListener);
-	mRoot->addFrameListener(m_ball);
+	mRoot->addFrameListener(BallFrameListener);
 }
 
 int main(int argc, char** argv)

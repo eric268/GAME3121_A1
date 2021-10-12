@@ -17,39 +17,15 @@ private:
 
 public:
 	//Getters
-	Ogre::Vector3 GetVelocity()
-	{
-		return m_vVelocity;
-	}
-	Ogre::SceneNode* GetSceneNode()
-	{
-		return m_sceneNode;
-	}
-	Ogre::Entity* GetEntity()
-	{
-		return m_mesh;
-	}
-	float GetSpeed()
-	{
-		return m_fSpeed;
-	}
+	Ogre::Vector3 GetVelocity();
+	Ogre::SceneNode* GetSceneNode();
+	Ogre::Entity* GetEntity();
+	float GetSpeed();
 
 	//Setters
-	void SetSceneNode(SceneNode* node)
-	{
-		m_sceneNode = node;
-	}
-	void SetEntity(Entity* en)
-	{
-		m_mesh = en;
-	}
-	void SetVelocity(Ogre::Vector3 vel)
-	{
-		m_vVelocity = vel;
-	}
-	void SetSpeed(float speed)
-	{
-		m_fSpeed = speed;
-	}
+	void SetSceneNode(SceneNode* node);
+	void SetEntity(Entity* en);
+	void SetVelocity(Ogre::Vector3 vel);
+	void SetSpeed(float speed);
 	virtual bool frameStarted(const Ogre::FrameEvent& evt) = 0;
 };
