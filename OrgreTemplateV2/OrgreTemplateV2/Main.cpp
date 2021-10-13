@@ -8,8 +8,7 @@
 #include "OgreApplicationContext.h"
 #include "OgreInput.h"
 #include "OgreRTShaderSystem.h"
-
-
+#include "CollisionManager.h"
 #include <iostream>
 #include <string>
 #include "UIManager.h"
@@ -105,13 +104,17 @@ bool OgreTutorial::keyPressed(const KeyboardEvent& evt)
 		break;
 	case 'a':
 		m_player1Pong->SetVelocity(Ogre::Vector3(-m_player1Pong->GetSpeed(), 0,0));
-		m_player1Pong->IncrementScore();
-		m_player1Pong->SetPointEarned(true);
 		break;
 	case 'd':
 		m_player1Pong->SetVelocity(Ogre::Vector3(m_player1Pong->GetSpeed(), 0, 0));
-		m_player1Pong->DecrementLivesRemaining();
-		m_ball->SetLifeLost(true);
+		break;
+	case 'r':
+		m_player1Pong->SetScore(0);
+		m_player1Pong->SetLivesRemaining(5);
+		m_player1Pong->SetLifeLabel(true);
+		m_player1Pong->SetPointEarned(true);
+		m_ball->GetSceneNode()->setPosition(Ogre::Vector3(0, 0, 0));
+		m_ball->SetVelocity(Ogre::Vector3(0,0,m_ball->GetSpeed()));
 		break;
 	default:
 		break;
@@ -185,7 +188,7 @@ void OgreTutorial::createScene()
 	*/
 	
 	m_player1Pong = new PongPaddle(scnMgr->createSceneNode("Player1"),scnMgr);
-	m_ball = new PongBall(scnMgr->createSceneNode("Ball"), scnMgr);
+	m_ball = new PongBall(scnMgr->createSceneNode("Ball"), scnMgr, m_player1Pong);
 }
 
 void OgreTutorial::createCamera()
@@ -217,6 +220,8 @@ void OgreTutorial::CreateTraysAndLabels()
 
 	//you must add this in order to add a tray
 	scnMgr->addRenderQueueListener(mOverlaySystem);
+
+	
 
 }
 

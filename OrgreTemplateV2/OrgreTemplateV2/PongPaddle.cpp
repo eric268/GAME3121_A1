@@ -10,6 +10,9 @@ PongPaddle::PongPaddle()
 	m_pointEarned = false;
 	m_iLivesRemaining = 5;
 	m_iScore = 0;
+	SetScale(Ogre::Vector3(0.5f, 0.1f, 0.1f));
+	SetWeight(0.5f);
+	m_lifeLost = false;
 	}
 
 
@@ -21,15 +24,17 @@ PongPaddle::PongPaddle(Ogre::SceneNode* player, Ogre::SceneManager* scnMgr)
 	SetSceneNode(player);
 	GetSceneNode()->attachObject(GetEntity());
 	scnMgr->getRootSceneNode()->addChild(GetSceneNode());
-
-	GetSceneNode()->setScale(0.5f, 0.1f, 0.1f);
+	SetScale(Ogre::Vector3(0.5f, 0.1f, 0.1f));
+	GetSceneNode()->setScale(GetScale());
 	GetSceneNode()->setPosition(Ogre::Vector3(0,0, 110));
 	SetVelocity(Ogre::Vector3(0, 0, 0));
-	SetSpeed(50.0f);
-	m_fBounds = 110;
+	SetSpeed(100.0f);
+	m_fBounds = 195;
 	m_pointEarned = false;
 	m_iLivesRemaining = 5;
 	m_iScore = 0;
+	SetWeight(0.5f);
+	m_lifeLost = false;
 }
 
 int PongPaddle::GetScore()
@@ -71,7 +76,14 @@ void PongPaddle::SetPointEarned(bool pEarned)
 {
 	m_pointEarned = pEarned;
 }
-
+void PongPaddle::SetLifeLabel(bool lifeLost)
+{
+	m_lifeLost = lifeLost;
+}
+bool PongPaddle::GetLifeLost()
+{
+	return m_lifeLost;
+}
 void PongPaddle::BoundsChecking()
 {
 	if (GetSceneNode()->getPosition().x <= -m_fBounds)

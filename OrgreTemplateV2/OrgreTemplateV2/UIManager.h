@@ -4,7 +4,7 @@
 #include "OgreInput.h"
 #include "PongBall.h"
 #include "PongPaddle.h"
-
+#include "CollisionManager.h"
 
 using namespace Ogre;
 using namespace OgreBites;

@@ -100,14 +100,15 @@ bool UIManager::frameStarted(const Ogre::FrameEvent& evt)
 		mScore->setCaption(std::to_string(m_paddleRef->GetScore()));
 		m_paddleRef->SetPointEarned(false);
 	}
-	if (m_ballRef->GetLifeLost())
+	if (m_paddleRef->GetLifeLost())
 	{
 		mLives->setCaption(std::to_string(m_paddleRef->GetLivesRemaining()));
-		m_ballRef->SetLifeLost(false);
+		m_paddleRef->SetLifeLabel(false);
 	}
 
 	CalculateFPS(evt.timeSinceLastFrame);
 	m_TimePerUpdate->setCaption(std::to_string(evt.timeSinceLastFrame) + " ms");
+
 
 	return true;
 }

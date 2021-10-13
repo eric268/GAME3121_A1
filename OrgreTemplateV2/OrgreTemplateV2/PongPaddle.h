@@ -9,6 +9,7 @@ private:
 	int m_iScore;
 	int m_iLivesRemaining;
 
+	bool m_lifeLost;
 	bool m_pointEarned;
 public:
 	PongPaddle();
@@ -16,6 +17,7 @@ public:
 	void BoundsChecking();
 	int GetScore();
 	int GetLivesRemaining();
+	bool GetLifeLost();
 	void IncrementScore();
 	void DecrementLivesRemaining();
 
@@ -25,6 +27,8 @@ public:
 
 	bool GetPointEarned();
 	void SetPointEarned(bool pEarned);
+
+	void SetLifeLabel(bool lifeLost);
 };
 
 
