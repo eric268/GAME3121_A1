@@ -8,7 +8,11 @@
 #include "OgreApplicationContext.h"
 #include "OgreInput.h"
 #include "OgreRTShaderSystem.h"
+
+
 #include <iostream>
+#include <string>
+#include "UIManager.h"
 #include "PongBall.h"
 #include "PongPaddle.h"
 
@@ -22,7 +26,7 @@ class OgreTutorial
 private:
 	PongPaddle* m_player1Pong;
 	PongBall*   m_ball;
-
+	UIManager* m_UIManager;
 	SceneManager* scnMgr;
 	Root* root;
 public:
@@ -35,6 +39,7 @@ public:
 	void createScene();
 	void createCamera();
 	void createFrameListener();
+	void CreateTraysAndLabels();
 };
 
 
@@ -60,9 +65,18 @@ void OgreTutorial::setup()
 	RTShader::ShaderGenerator* shadergen = RTShader::ShaderGenerator::getSingletonPtr();
 	shadergen->addSceneManager(scnMgr);
 
+
 	createScene();
+
 	createCamera();
+
+	CreateTraysAndLabels();
+
 	createFrameListener();
+
+	
+
+
 
 }
 
@@ -70,10 +84,10 @@ bool OgreTutorial::keyReleased(const KeyboardEvent& evt)
 {
 	switch (evt.keysym.sym)
 	{
-	case 'w':
+	case 'a':
 		m_player1Pong->SetVelocity(Ogre::Vector3(0, 0, 0));
 		break;
-	case 's':
+	case 'd':
 		m_player1Pong->SetVelocity(Ogre::Vector3(0, 0, 0));
 		break;
 	default:
@@ -89,11 +103,15 @@ bool OgreTutorial::keyPressed(const KeyboardEvent& evt)
 	case SDLK_ESCAPE:
 		getRoot()->queueEndRendering();
 		break;
-	case 'w':
-		m_player1Pong->SetVelocity(Ogre::Vector3(0,0,-m_player1Pong->GetSpeed()));
+	case 'a':
+		m_player1Pong->SetVelocity(Ogre::Vector3(-m_player1Pong->GetSpeed(), 0,0));
+		m_player1Pong->IncrementScore();
+		m_player1Pong->SetPointEarned(true);
 		break;
-	case 's':
-		m_player1Pong->SetVelocity(Ogre::Vector3(0, 0, m_player1Pong->GetSpeed()));
+	case 'd':
+		m_player1Pong->SetVelocity(Ogre::Vector3(m_player1Pong->GetSpeed(), 0, 0));
+		m_player1Pong->DecrementLivesRemaining();
+		m_ball->SetLifeLost(true);
 		break;
 	default:
 		break;
@@ -190,14 +208,27 @@ void OgreTutorial::createCamera()
 	
 
 }
+void OgreTutorial::CreateTraysAndLabels()
+{
+
+	OgreBites::TrayManager* mTrayMgr =  new OgreBites::TrayManager("InterfaceName", getRenderWindow());
+
+	m_UIManager = new UIManager(mTrayMgr, m_player1Pong, m_ball);
+
+	//you must add this in order to add a tray
+	scnMgr->addRenderQueueListener(mOverlaySystem);
+
+}
 
 void OgreTutorial::createFrameListener()
 {
 	Ogre::FrameListener* P1FrameListener =  m_player1Pong;
 	Ogre::FrameListener* BallFrameListener = m_ball;
+	Ogre::FrameListener* UIManagerListener = m_UIManager;
 
 	mRoot->addFrameListener(P1FrameListener);
 	mRoot->addFrameListener(BallFrameListener);
+	mRoot->addFrameListener(UIManagerListener);
 }
 
 int main(int argc, char** argv)

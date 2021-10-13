@@ -7,6 +7,8 @@ PongBall::PongBall()
 	SetVelocity(Ogre::Vector3(0, 0, 0));
 	SetSpeed(0.0f);
 	m_bIsColliding = false;
+	m_scale = Ogre::Vector3(0.1f, 0.1f, 0.1f);
+	m_lifeLost = false;
 }
 
 PongBall::PongBall(Ogre::SceneNode* node, Ogre::SceneManager* scnMgr)
@@ -17,13 +19,15 @@ PongBall::PongBall(Ogre::SceneNode* node, Ogre::SceneManager* scnMgr)
 	SetSceneNode(node);
 	GetSceneNode()->attachObject(GetEntity());
 	scnMgr->getRootSceneNode()->addChild(GetSceneNode());
-
-	GetSceneNode()->setScale(0.1f, 0.1f, 0.1f);
+	m_scale = Ogre::Vector3(0.1f, 0.1f, 0.1f);
+	GetSceneNode()->setScale(m_scale);
 	GetSceneNode()->setPosition(Ogre::Vector3(0, 0, 0));
 	SetVelocity(Ogre::Vector3(0, 0, 0));
 	SetSpeed(0.0f);
-
+	
 	m_bIsColliding = false;
+	m_lifeLost = false;
+	
 }
 
 bool PongBall::GetIsColliding()
@@ -38,6 +42,17 @@ void PongBall::SetIsColliding(bool colliding)
 
 bool PongBall::frameStarted(const Ogre::FrameEvent & evt)
 {
+
 	GetSceneNode()->translate(GetVelocity() * evt.timeSinceLastFrame);
 	return true;
+}
+
+bool PongBall::GetLifeLost()
+{
+	return m_lifeLost;
+}
+
+void PongBall::SetLifeLost(bool lifeLost)
+{
+	m_lifeLost = lifeLost;
 }

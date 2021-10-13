@@ -23,11 +23,13 @@
     <ClCompile Include="PongBall.cpp" />
     <ClCompile Include="GameObject.cpp" />
     <ClCompile Include="PongPaddle.cpp" />
+    <ClCompile Include="UIManager.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="PongBall.h" />
     <ClInclude Include="GameObject.h" />
     <ClInclude Include="PongPaddle.h" />
+    <ClInclude Include="UIManager.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>

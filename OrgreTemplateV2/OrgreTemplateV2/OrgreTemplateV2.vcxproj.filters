@@ -30,6 +30,9 @@
     <ClCompile Include="PongPaddle.cpp">
       <Filter>GameObjects</Filter>
     </ClCompile>
+    <ClCompile Include="UIManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="GameObject.h">
@@ -40,6 +43,9 @@
     </ClInclude>
     <ClInclude Include="PongPaddle.h">
       <Filter>GameObjects</Filter>
+    </ClInclude>
+    <ClInclude Include="UIManager.h">
+      <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
