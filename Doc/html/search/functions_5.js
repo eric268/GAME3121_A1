@@ -1,0 +1,22 @@
+var searchData=
+[
+  ['getentity_0',['GetEntity',['../class_game_object.html#a2dab73dd0b60821a30ab475e27582ced',1,'GameObject']]],
+  ['getfps_1',['GetFPS',['../class_u_i_manager.html#abd79ee99b5d749c1ede7963830209787',1,'UIManager']]],
+  ['getfpslabel_2',['GetFPSLabel',['../class_u_i_manager.html#ae4d21520e50a8995fbb53c587b97ab65',1,'UIManager']]],
+  ['getiscolliding_3',['GetIsColliding',['../class_pong_ball.html#a51f57c0551a7f350afe8feb8108ad83e',1,'PongBall']]],
+  ['getlifelost_4',['GetLifeLost',['../class_pong_paddle.html#adb3a62c6f1f7e5067efb3e229799788e',1,'PongPaddle']]],
+  ['getlives_5',['GetLives',['../class_u_i_manager.html#aed3616cf275318481823442810bf7b04',1,'UIManager']]],
+  ['getliveslabel_6',['GetLivesLabel',['../class_u_i_manager.html#a4958a4bbd056c260382511ef79857473',1,'UIManager']]],
+  ['getlivesremaining_7',['GetLivesRemaining',['../class_pong_paddle.html#aa018cc5bab5ce4b06e8631325c92e567',1,'PongPaddle']]],
+  ['getpointearned_8',['GetPointEarned',['../class_pong_paddle.html#ac2a83b27db44409c8930b573525a6957',1,'PongPaddle']]],
+  ['getradius_9',['GetRadius',['../class_pong_ball.html#a2226ff2dbc6ba5d5363408464631b7fa',1,'PongBall']]],
+  ['getscale_10',['GetScale',['../class_game_object.html#ae1b8f860867e0ca8d2b569a50918f283',1,'GameObject']]],
+  ['getscenenode_11',['GetSceneNode',['../class_game_object.html#ab4318d69bb450da55c6d5378d4b5220d',1,'GameObject']]],
+  ['getscore_12',['GetScore',['../class_pong_paddle.html#a0fe86cf4d73e027d47b1eb85c5049fc9',1,'PongPaddle::GetScore()'],['../class_u_i_manager.html#a032f1acca837c257edbda62667dab06c',1,'UIManager::GetScore()']]],
+  ['getscorelabel_13',['GetScoreLabel',['../class_u_i_manager.html#a57abce5414609f8486726affb83810be',1,'UIManager']]],
+  ['getspeed_14',['GetSpeed',['../class_game_object.html#a3f2b756ddd208ae302add9cafe14a41b',1,'GameObject']]],
+  ['gettimeperupdate_15',['GetTimePerUpdate',['../class_u_i_manager.html#aeca29cee369c4758146266787a97c36b',1,'UIManager']]],
+  ['gettimeperupdatelabel_16',['GetTimePerUpdateLabel',['../class_u_i_manager.html#a2a1513a9eb4207e2164b300889812661',1,'UIManager']]],
+  ['getvelocity_17',['GetVelocity',['../class_game_object.html#aa57aabfa73bbd497597a03e486252cf5',1,'GameObject']]],
+  ['getweight_18',['GetWeight',['../class_game_object.html#aeb3573c35c2fb24a473dbfb93f0d57ce',1,'GameObject']]]
+];

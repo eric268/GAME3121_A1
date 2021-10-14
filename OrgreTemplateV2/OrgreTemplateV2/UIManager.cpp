@@ -3,7 +3,20 @@
 #include <string>
 UIManager::UIManager()
 {
+	mTrayMgr = nullptr;
+	m_paddleRef = nullptr;
+	m_ballRef = nullptr;
 
+	mScoreLabel = nullptr;
+	mScore = nullptr;
+
+	mLivesLabel = nullptr;
+	mLives = nullptr;
+	m_FPSLabel = nullptr;
+	m_FPS = nullptr;
+
+	m_TimePerUpdateLabel = nullptr;
+	m_TimePerUpdate = nullptr;
 }
 
 UIManager::UIManager(OgreBites::TrayManager* mT, PongPaddle* paddleRef, PongBall* ballRef)
@@ -12,27 +25,50 @@ UIManager::UIManager(OgreBites::TrayManager* mT, PongPaddle* paddleRef, PongBall
 	m_paddleRef = paddleRef;
 	m_ballRef = ballRef;
 
-	
+	mScoreLabel = mTrayMgr->createLabel(TL_TOPLEFT, "Score", "Score:", 150);
+	mScore = mTrayMgr->createLabel(TL_TOPLEFT, "score", std::to_string(m_paddleRef->GetScore()), 150);
 
-	SetScoreLabel(mTrayMgr->createLabel(TL_TOPLEFT, "Score", "Score:", 150));
-	SetScore(mTrayMgr->createLabel(TL_TOPLEFT, "score", std::to_string(m_paddleRef->GetScore()), 150));
-	SetLivesLabel(mTrayMgr->createLabel(TL_TOPLEFT, "Lives", "Lives:", 150));
-	SetLives(mTrayMgr->createLabel(TL_TOPLEFT, "lives", std::to_string(m_paddleRef->GetLivesRemaining()), 150));
+	mLivesLabel = mTrayMgr->createLabel(TL_TOPLEFT, "Lives", "Lives:", 150);
+	mLives = mTrayMgr->createLabel(TL_TOPLEFT, "lives", std::to_string(m_paddleRef->GetLivesRemaining()), 150);
 
 	m_FPSLabel = mTrayMgr->createLabel(TL_TOPRIGHT, "FPS", "FPS:", 150);
 	m_FPS = mTrayMgr->createLabel(TL_TOPRIGHT, "fps", std::to_string(0), 150);
 
 	m_TimePerUpdateLabel = mTrayMgr->createLabel(TL_TOPRIGHT, "Time/Update", "Time/Update:", 150);
-	m_TimePerUpdate = mTrayMgr->createLabel(TL_TOPRIGHT, "time/update", std::to_string(0), 150);
-
-	
-
-	
+	m_TimePerUpdate = mTrayMgr->createLabel(TL_TOPRIGHT, "time/update", std::to_string(0), 150);	
 }
-
-OgreBites::TrayListener UIManager::GetTrayListener()
+UIManager::~UIManager()
 {
-	return myTrayListener;
+	delete mTrayMgr;
+	mTrayMgr = nullptr;
+
+	delete mScoreLabel;
+	mScoreLabel = nullptr;
+
+	delete mScore;
+	mScore = nullptr;
+
+	delete mLivesLabel;
+	mLivesLabel = nullptr;
+
+	delete mLives;
+	mLives = nullptr;
+
+	delete m_FPSLabel;
+	m_FPSLabel = nullptr;
+
+	delete m_FPS;
+	m_FPS = nullptr;
+
+	delete m_TimePerUpdateLabel;
+	m_TimePerUpdateLabel = nullptr;
+
+	delete m_TimePerUpdate;
+	m_TimePerUpdate	= nullptr;
+
+	m_paddleRef = nullptr;
+	m_ballRef = nullptr;
+
 }
 
 OgreBites::Label* UIManager::GetScoreLabel()
@@ -55,6 +91,26 @@ OgreBites::Label* UIManager::GetLives()
 	return mLives;;
 }
 
+OgreBites::Label* UIManager::GetTimePerUpdateLabel()
+{
+	return m_TimePerUpdateLabel;
+}
+
+OgreBites::Label* UIManager::GetTimePerUpdate()
+{
+	return m_TimePerUpdate;
+}
+
+OgreBites::Label* UIManager::GetFPSLabel()
+{
+	return m_FPSLabel;
+}
+
+OgreBites::Label* UIManager::GetFPS()
+{
+	return m_FPS;
+}
+
 void UIManager::SetScoreLabel(OgreBites::Label* label)
 {
 	mScoreLabel = label;
@@ -73,6 +129,22 @@ void UIManager::SetLivesLabel(OgreBites::Label* label)
 void UIManager::SetLives(OgreBites::Label* label)
 {
 	mLives = label;
+}
+void UIManager::SetTimePerUpdateLabel(OgreBites::Label* label)
+{
+	m_TimePerUpdateLabel = label;
+}
+void UIManager::SetTimePerUpdate(OgreBites::Label* label)
+{
+	m_TimePerUpdate = label;
+}
+void UIManager::SetFPSLabel(OgreBites::Label* label)
+{
+	m_FPSLabel = label;
+}
+void UIManager::SetFPS(OgreBites::Label* label)
+{
+	m_FPS = label;
 }
 void UIManager::CalculateFPS(float deltaTime)
 {
@@ -107,7 +179,7 @@ bool UIManager::frameStarted(const Ogre::FrameEvent& evt)
 	}
 
 	CalculateFPS(evt.timeSinceLastFrame);
-	m_TimePerUpdate->setCaption(std::to_string(evt.timeSinceLastFrame) + " ms");
+	m_TimePerUpdate->setCaption(std::to_string(evt.timeSinceLastFrame * 1000) + " ms");
 
 
 	return true;

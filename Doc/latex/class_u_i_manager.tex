@@ -1,0 +1,373 @@
+\hypertarget{class_u_i_manager}{}\doxysection{UIManager Class Reference}
+\label{class_u_i_manager}\index{UIManager@{UIManager}}
+
+
+Encapsulates and manages all UI labels elements.  
+
+
+
+
+{\ttfamily \#include $<$UIManager.\+h$>$}
+
+Inheritance diagram for UIManager\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_u_i_manager}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_u_i_manager_a32b72c377f864f7cd197e6ffe738142f}{UIManager}} ()
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_u_i_manager}{UIManager}} Constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_u_i_manager_af658a232ed9f00b78e156fb3c0e804db}{UIManager}} (Ogre\+Bites\+::\+Tray\+Manager $\ast$m\+Tray\+Mgr, \mbox{\hyperlink{class_pong_paddle}{Pong\+Paddle}} $\ast$paddle\+Ref, \mbox{\hyperlink{class_pong_ball}{Pong\+Ball}} $\ast$ball\+Ref)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_u_i_manager}{UIManager}} Overloaded Constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_u_i_manager_aeac3e2a8fd4ba49821ce653f4d2fa6b6}{$\sim$\+UIManager}} ()
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_u_i_manager}{UIManager}} Destructor. \end{DoxyCompactList}\item 
+Ogre\+Bites\+::\+Label $\ast$ \mbox{\hyperlink{class_u_i_manager_a57abce5414609f8486726affb83810be}{Get\+Score\+Label}} ()
+\begin{DoxyCompactList}\small\item\em Returns the Label pointer for the Score text box UI element. \end{DoxyCompactList}\item 
+Ogre\+Bites\+::\+Label $\ast$ \mbox{\hyperlink{class_u_i_manager_a032f1acca837c257edbda62667dab06c}{Get\+Score}} ()
+\begin{DoxyCompactList}\small\item\em Returns the Label pointer for the score integer value. \end{DoxyCompactList}\item 
+Ogre\+Bites\+::\+Label $\ast$ \mbox{\hyperlink{class_u_i_manager_a4958a4bbd056c260382511ef79857473}{Get\+Lives\+Label}} ()
+\begin{DoxyCompactList}\small\item\em Returns the Label for the Lives Remaining text box UI element. \end{DoxyCompactList}\item 
+Ogre\+Bites\+::\+Label $\ast$ \mbox{\hyperlink{class_u_i_manager_aed3616cf275318481823442810bf7b04}{Get\+Lives}} ()
+\begin{DoxyCompactList}\small\item\em Returns the Label pointer for the score integer value. \end{DoxyCompactList}\item 
+Ogre\+Bites\+::\+Label $\ast$ \mbox{\hyperlink{class_u_i_manager_a2a1513a9eb4207e2164b300889812661}{Get\+Time\+Per\+Update\+Label}} ()
+\begin{DoxyCompactList}\small\item\em Returns the Label pointer for the Time/\+Update text box UI element. \end{DoxyCompactList}\item 
+Ogre\+Bites\+::\+Label $\ast$ \mbox{\hyperlink{class_u_i_manager_aeca29cee369c4758146266787a97c36b}{Get\+Time\+Per\+Update}} ()
+\begin{DoxyCompactList}\small\item\em Returns the Label for the Time/\+Update floating point value. \end{DoxyCompactList}\item 
+Ogre\+Bites\+::\+Label $\ast$ \mbox{\hyperlink{class_u_i_manager_ae4d21520e50a8995fbb53c587b97ab65}{Get\+FPSLabel}} ()
+\begin{DoxyCompactList}\small\item\em Returns the Label for the Frame Per Second text box UI element. \end{DoxyCompactList}\item 
+Ogre\+Bites\+::\+Label $\ast$ \mbox{\hyperlink{class_u_i_manager_abd79ee99b5d749c1ede7963830209787}{Get\+FPS}} ()
+\begin{DoxyCompactList}\small\item\em Returns the Label for the Frame Per Second point value. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_u_i_manager_abd47b9e7e26886bf252ca908f9491dd3}{Calculate\+FPS}} (float delta\+Time)
+\begin{DoxyCompactList}\small\item\em Calculates the Frames Per Second. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_u_i_manager_a53e3f69844734e082a714deb6ad8620d}{Set\+Score\+Label}} (Ogre\+Bites\+::\+Label $\ast$label)
+\begin{DoxyCompactList}\small\item\em Changes the Score Labels label. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_u_i_manager_a693e4a39bb2583529f27d85c07ee76ca}{Set\+Score}} (Ogre\+Bites\+::\+Label $\ast$label)
+\begin{DoxyCompactList}\small\item\em Changes the numeric Score Labels label. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_u_i_manager_ac25ffc970d5f15f4a43dcb29ef90fc0b}{Set\+Lives\+Label}} (Ogre\+Bites\+::\+Label $\ast$label)
+\begin{DoxyCompactList}\small\item\em Changes the lives remaining labels label. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_u_i_manager_a23a48c2ed9da1903dc947edba4d62e19}{Set\+Lives}} (Ogre\+Bites\+::\+Label $\ast$label)
+\begin{DoxyCompactList}\small\item\em Changes the numeric lives remaining labels label. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_u_i_manager_a606aa92da4cff02a422b748cc86525aa}{Set\+Time\+Per\+Update\+Label}} (Ogre\+Bites\+::\+Label $\ast$label)
+\begin{DoxyCompactList}\small\item\em Changes the Time\+Per\+Update label. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_u_i_manager_ac7d5312375ad5dcf731b991d78b66fbc}{Set\+Time\+Per\+Update}} (Ogre\+Bites\+::\+Label $\ast$label)
+\begin{DoxyCompactList}\small\item\em Changes the numeric Time\+Per\+Update label. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_u_i_manager_a123aead2a14f0285cd85c2796e6a4195}{Set\+FPSLabel}} (Ogre\+Bites\+::\+Label $\ast$label)
+\begin{DoxyCompactList}\small\item\em Changes the FPS Labels label. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_u_i_manager_a939d762852bb5ea3ce7d8424d6229b74}{Set\+FPS}} (Ogre\+Bites\+::\+Label $\ast$label)
+\begin{DoxyCompactList}\small\item\em Changes the FPS Labels label. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_u_i_manager_a2a08e0e79f7b060c72e2466d6e4cd601}{frame\+Started}} (const Ogre\+::\+Frame\+Event \&evt)
+\begin{DoxyCompactList}\small\item\em Overrides the bool \mbox{\hyperlink{class_game_object_a1173a94f187d10a39777398672c187c7}{Game\+Object\+::frame\+Started(const Ogre\+::\+Frame\+Event\& evt)}} function found in \mbox{\hyperlink{_game_object_8h}{Game\+Object.\+h}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Encapsulates and manages all UI labels elements. 
+
+This class manages and updates all UI labels and elements. It uses references from the ball and player paddle to known when to update certain labels. It inherits from the Ogre\+::\+Frame\+Listener class. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_u_i_manager_a32b72c377f864f7cd197e6ffe738142f}\label{class_u_i_manager_a32b72c377f864f7cd197e6ffe738142f}} 
+\index{UIManager@{UIManager}!UIManager@{UIManager}}
+\index{UIManager@{UIManager}!UIManager@{UIManager}}
+\doxysubsubsection{\texorpdfstring{UIManager()}{UIManager()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily UIManager\+::\+UIManager (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{class_u_i_manager}{UIManager}} Constructor. 
+
+This is the default constructor \mbox{\Hypertarget{class_u_i_manager_af658a232ed9f00b78e156fb3c0e804db}\label{class_u_i_manager_af658a232ed9f00b78e156fb3c0e804db}} 
+\index{UIManager@{UIManager}!UIManager@{UIManager}}
+\index{UIManager@{UIManager}!UIManager@{UIManager}}
+\doxysubsubsection{\texorpdfstring{UIManager()}{UIManager()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily UIManager\+::\+UIManager (\begin{DoxyParamCaption}\item[{Ogre\+Bites\+::\+Tray\+Manager $\ast$}]{m\+Tray\+Mgr,  }\item[{\mbox{\hyperlink{class_pong_paddle}{Pong\+Paddle}} $\ast$}]{paddle\+Ref,  }\item[{\mbox{\hyperlink{class_pong_ball}{Pong\+Ball}} $\ast$}]{ball\+Ref }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{class_u_i_manager}{UIManager}} Overloaded Constructor. 
+
+This creates and initializes all labels as well as takes in references to the Tray\+Manager, Paddle, and ball game objects. 
+\begin{DoxyParams}{Parameters}
+{\em m\+Tray\+Mgr} & This is a reference to the Tray\+Manager created in the \mbox{\hyperlink{_main_8cpp}{Main.\+cpp}} file. This allows for the UI elements to be displayed to the correct viewport. \\
+\hline
+{\em paddle\+Ref} & This is a reference to the player paddle game object. This allows for checking if UI updates need to be done such as changing the score. \\
+\hline
+{\em ball\+Ref} & This is a reference to the player paddle game object. This allows for checking if UI updates need to be done such as if the ball has gone past the protected area and a life has been lost. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_u_i_manager_aeac3e2a8fd4ba49821ce653f4d2fa6b6}\label{class_u_i_manager_aeac3e2a8fd4ba49821ce653f4d2fa6b6}} 
+\index{UIManager@{UIManager}!````~UIManager@{$\sim$UIManager}}
+\index{````~UIManager@{$\sim$UIManager}!UIManager@{UIManager}}
+\doxysubsubsection{\texorpdfstring{$\sim$UIManager()}{~UIManager()}}
+{\footnotesize\ttfamily UIManager\+::$\sim$\+UIManager (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{class_u_i_manager}{UIManager}} Destructor. 
+
+This destroys all pointers to variables owned or managed by the \mbox{\hyperlink{class_u_i_manager}{UIManager}}. Specifically, all labels are owned by the \mbox{\hyperlink{class_u_i_manager}{UIManager}}. \begin{DoxyNote}{Note}
+While the paddle\+Ref and ball\+Ref pointers are set to nullptr in this destructor the references are not destroyed here are they are owned by the Main\+Initializer class in \mbox{\hyperlink{_main_8cpp}{main.\+cpp}} ~\newline
+ 
+\end{DoxyNote}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_u_i_manager_abd47b9e7e26886bf252ca908f9491dd3}\label{class_u_i_manager_abd47b9e7e26886bf252ca908f9491dd3}} 
+\index{UIManager@{UIManager}!CalculateFPS@{CalculateFPS}}
+\index{CalculateFPS@{CalculateFPS}!UIManager@{UIManager}}
+\doxysubsubsection{\texorpdfstring{CalculateFPS()}{CalculateFPS()}}
+{\footnotesize\ttfamily void UIManager\+::\+Calculate\+FPS (\begin{DoxyParamCaption}\item[{float}]{delta\+Time }\end{DoxyParamCaption})}
+
+
+
+Calculates the Frames Per Second. 
+
+Receives the amount of time since last frame and calculates the current update time per frame. Then averages the update time per frame across all updates within a second. 
+\begin{DoxyParams}{Parameters}
+{\em delta\+Time} & provides the time since the last frame was updated. This is used to calculate the average frames updated in a second. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_u_i_manager_a2a08e0e79f7b060c72e2466d6e4cd601}\label{class_u_i_manager_a2a08e0e79f7b060c72e2466d6e4cd601}} 
+\index{UIManager@{UIManager}!frameStarted@{frameStarted}}
+\index{frameStarted@{frameStarted}!UIManager@{UIManager}}
+\doxysubsubsection{\texorpdfstring{frameStarted()}{frameStarted()}}
+{\footnotesize\ttfamily bool UIManager\+::frame\+Started (\begin{DoxyParamCaption}\item[{const Ogre\+::\+Frame\+Event \&}]{evt }\end{DoxyParamCaption})}
+
+
+
+Overrides the bool \mbox{\hyperlink{class_game_object_a1173a94f187d10a39777398672c187c7}{Game\+Object\+::frame\+Started(const Ogre\+::\+Frame\+Event\& evt)}} function found in \mbox{\hyperlink{_game_object_8h}{Game\+Object.\+h}}. 
+
+Checks for updates at the beginning of each frame for the UI Manager. Is updates at a constant time across all hardware. 
+\begin{DoxyParams}{Parameters}
+{\em evt} & Provides information regarding the time since the last event and the time since last update for the UIMangager. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns true if next frame should be updated and false if next frame should not be updated and the game should be exited. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_u_i_manager_abd79ee99b5d749c1ede7963830209787}\label{class_u_i_manager_abd79ee99b5d749c1ede7963830209787}} 
+\index{UIManager@{UIManager}!GetFPS@{GetFPS}}
+\index{GetFPS@{GetFPS}!UIManager@{UIManager}}
+\doxysubsubsection{\texorpdfstring{GetFPS()}{GetFPS()}}
+{\footnotesize\ttfamily Ogre\+Bites\+::\+Label $\ast$ UIManager\+::\+Get\+FPS (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Returns the Label for the Frame Per Second point value. 
+
+\begin{DoxyReturn}{Returns}
+Returns an Ogre\+Bites\+::\+Label Pointer 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_u_i_manager_ae4d21520e50a8995fbb53c587b97ab65}\label{class_u_i_manager_ae4d21520e50a8995fbb53c587b97ab65}} 
+\index{UIManager@{UIManager}!GetFPSLabel@{GetFPSLabel}}
+\index{GetFPSLabel@{GetFPSLabel}!UIManager@{UIManager}}
+\doxysubsubsection{\texorpdfstring{GetFPSLabel()}{GetFPSLabel()}}
+{\footnotesize\ttfamily Ogre\+Bites\+::\+Label $\ast$ UIManager\+::\+Get\+FPSLabel (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Returns the Label for the Frame Per Second text box UI element. 
+
+\begin{DoxyReturn}{Returns}
+Returns an Ogre\+Bites\+::\+Label Pointer 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_u_i_manager_aed3616cf275318481823442810bf7b04}\label{class_u_i_manager_aed3616cf275318481823442810bf7b04}} 
+\index{UIManager@{UIManager}!GetLives@{GetLives}}
+\index{GetLives@{GetLives}!UIManager@{UIManager}}
+\doxysubsubsection{\texorpdfstring{GetLives()}{GetLives()}}
+{\footnotesize\ttfamily Ogre\+Bites\+::\+Label $\ast$ UIManager\+::\+Get\+Lives (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Returns the Label pointer for the score integer value. 
+
+\begin{DoxyReturn}{Returns}
+Returns an Ogre\+Bites\+::\+Label Pointer 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_u_i_manager_a4958a4bbd056c260382511ef79857473}\label{class_u_i_manager_a4958a4bbd056c260382511ef79857473}} 
+\index{UIManager@{UIManager}!GetLivesLabel@{GetLivesLabel}}
+\index{GetLivesLabel@{GetLivesLabel}!UIManager@{UIManager}}
+\doxysubsubsection{\texorpdfstring{GetLivesLabel()}{GetLivesLabel()}}
+{\footnotesize\ttfamily Ogre\+Bites\+::\+Label $\ast$ UIManager\+::\+Get\+Lives\+Label (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Returns the Label for the Lives Remaining text box UI element. 
+
+\begin{DoxyReturn}{Returns}
+Returns an Ogre\+Bites\+::\+Label Pointer 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_u_i_manager_a032f1acca837c257edbda62667dab06c}\label{class_u_i_manager_a032f1acca837c257edbda62667dab06c}} 
+\index{UIManager@{UIManager}!GetScore@{GetScore}}
+\index{GetScore@{GetScore}!UIManager@{UIManager}}
+\doxysubsubsection{\texorpdfstring{GetScore()}{GetScore()}}
+{\footnotesize\ttfamily Ogre\+Bites\+::\+Label $\ast$ UIManager\+::\+Get\+Score (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Returns the Label pointer for the score integer value. 
+
+\begin{DoxyReturn}{Returns}
+Returns an Ogre\+Bites\+::\+Label Pointer 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_u_i_manager_a57abce5414609f8486726affb83810be}\label{class_u_i_manager_a57abce5414609f8486726affb83810be}} 
+\index{UIManager@{UIManager}!GetScoreLabel@{GetScoreLabel}}
+\index{GetScoreLabel@{GetScoreLabel}!UIManager@{UIManager}}
+\doxysubsubsection{\texorpdfstring{GetScoreLabel()}{GetScoreLabel()}}
+{\footnotesize\ttfamily Ogre\+Bites\+::\+Label $\ast$ UIManager\+::\+Get\+Score\+Label (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Returns the Label pointer for the Score text box UI element. 
+
+\begin{DoxyReturn}{Returns}
+Returns an Ogre\+Bites\+::\+Label Pointer 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_u_i_manager_aeca29cee369c4758146266787a97c36b}\label{class_u_i_manager_aeca29cee369c4758146266787a97c36b}} 
+\index{UIManager@{UIManager}!GetTimePerUpdate@{GetTimePerUpdate}}
+\index{GetTimePerUpdate@{GetTimePerUpdate}!UIManager@{UIManager}}
+\doxysubsubsection{\texorpdfstring{GetTimePerUpdate()}{GetTimePerUpdate()}}
+{\footnotesize\ttfamily Ogre\+Bites\+::\+Label $\ast$ UIManager\+::\+Get\+Time\+Per\+Update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Returns the Label for the Time/\+Update floating point value. 
+
+\begin{DoxyReturn}{Returns}
+Returns an Ogre\+Bites\+::\+Label Pointer 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_u_i_manager_a2a1513a9eb4207e2164b300889812661}\label{class_u_i_manager_a2a1513a9eb4207e2164b300889812661}} 
+\index{UIManager@{UIManager}!GetTimePerUpdateLabel@{GetTimePerUpdateLabel}}
+\index{GetTimePerUpdateLabel@{GetTimePerUpdateLabel}!UIManager@{UIManager}}
+\doxysubsubsection{\texorpdfstring{GetTimePerUpdateLabel()}{GetTimePerUpdateLabel()}}
+{\footnotesize\ttfamily Ogre\+Bites\+::\+Label $\ast$ UIManager\+::\+Get\+Time\+Per\+Update\+Label (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Returns the Label pointer for the Time/\+Update text box UI element. 
+
+\begin{DoxyReturn}{Returns}
+Returns an Ogre\+Bites\+::\+Label Pointer 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_u_i_manager_a939d762852bb5ea3ce7d8424d6229b74}\label{class_u_i_manager_a939d762852bb5ea3ce7d8424d6229b74}} 
+\index{UIManager@{UIManager}!SetFPS@{SetFPS}}
+\index{SetFPS@{SetFPS}!UIManager@{UIManager}}
+\doxysubsubsection{\texorpdfstring{SetFPS()}{SetFPS()}}
+{\footnotesize\ttfamily void UIManager\+::\+Set\+FPS (\begin{DoxyParamCaption}\item[{Ogre\+Bites\+::\+Label $\ast$}]{label }\end{DoxyParamCaption})}
+
+
+
+Changes the FPS Labels label. 
+
+Allows for the FPS label to be initialized or set to different labels. 
+\begin{DoxyParams}{Parameters}
+{\em label} & is the Ogre\+Bites\+::\+Label pointer value the FPS label will be set too. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_u_i_manager_a123aead2a14f0285cd85c2796e6a4195}\label{class_u_i_manager_a123aead2a14f0285cd85c2796e6a4195}} 
+\index{UIManager@{UIManager}!SetFPSLabel@{SetFPSLabel}}
+\index{SetFPSLabel@{SetFPSLabel}!UIManager@{UIManager}}
+\doxysubsubsection{\texorpdfstring{SetFPSLabel()}{SetFPSLabel()}}
+{\footnotesize\ttfamily void UIManager\+::\+Set\+FPSLabel (\begin{DoxyParamCaption}\item[{Ogre\+Bites\+::\+Label $\ast$}]{label }\end{DoxyParamCaption})}
+
+
+
+Changes the FPS Labels label. 
+
+Allows for the FPS label to be initialized or set to different labels. 
+\begin{DoxyParams}{Parameters}
+{\em label} & is the Ogre\+Bites\+::\+Label pointer value the FPS label will be set too. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_u_i_manager_a23a48c2ed9da1903dc947edba4d62e19}\label{class_u_i_manager_a23a48c2ed9da1903dc947edba4d62e19}} 
+\index{UIManager@{UIManager}!SetLives@{SetLives}}
+\index{SetLives@{SetLives}!UIManager@{UIManager}}
+\doxysubsubsection{\texorpdfstring{SetLives()}{SetLives()}}
+{\footnotesize\ttfamily void UIManager\+::\+Set\+Lives (\begin{DoxyParamCaption}\item[{Ogre\+Bites\+::\+Label $\ast$}]{label }\end{DoxyParamCaption})}
+
+
+
+Changes the numeric lives remaining labels label. 
+
+Allows for the numeric lives remaining to be initialized or set to different labels. 
+\begin{DoxyParams}{Parameters}
+{\em label} & is the Ogre\+Bites\+::\+Label pointer value the numeric lives remiaining label will be set too. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_u_i_manager_ac25ffc970d5f15f4a43dcb29ef90fc0b}\label{class_u_i_manager_ac25ffc970d5f15f4a43dcb29ef90fc0b}} 
+\index{UIManager@{UIManager}!SetLivesLabel@{SetLivesLabel}}
+\index{SetLivesLabel@{SetLivesLabel}!UIManager@{UIManager}}
+\doxysubsubsection{\texorpdfstring{SetLivesLabel()}{SetLivesLabel()}}
+{\footnotesize\ttfamily void UIManager\+::\+Set\+Lives\+Label (\begin{DoxyParamCaption}\item[{Ogre\+Bites\+::\+Label $\ast$}]{label }\end{DoxyParamCaption})}
+
+
+
+Changes the lives remaining labels label. 
+
+Allows for the lives remaining to be initialized or set to different labels. 
+\begin{DoxyParams}{Parameters}
+{\em label} & is the Ogre\+Bites\+::\+Label pointer value the lives remiaining label will be set too. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_u_i_manager_a693e4a39bb2583529f27d85c07ee76ca}\label{class_u_i_manager_a693e4a39bb2583529f27d85c07ee76ca}} 
+\index{UIManager@{UIManager}!SetScore@{SetScore}}
+\index{SetScore@{SetScore}!UIManager@{UIManager}}
+\doxysubsubsection{\texorpdfstring{SetScore()}{SetScore()}}
+{\footnotesize\ttfamily void UIManager\+::\+Set\+Score (\begin{DoxyParamCaption}\item[{Ogre\+Bites\+::\+Label $\ast$}]{label }\end{DoxyParamCaption})}
+
+
+
+Changes the numeric Score Labels label. 
+
+Allows for the numeric score Label to be initialized or set to different labels. 
+\begin{DoxyParams}{Parameters}
+{\em label} & is the Ogre\+Bites\+::\+Label pointer value the numeric score label will be set too. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_u_i_manager_a53e3f69844734e082a714deb6ad8620d}\label{class_u_i_manager_a53e3f69844734e082a714deb6ad8620d}} 
+\index{UIManager@{UIManager}!SetScoreLabel@{SetScoreLabel}}
+\index{SetScoreLabel@{SetScoreLabel}!UIManager@{UIManager}}
+\doxysubsubsection{\texorpdfstring{SetScoreLabel()}{SetScoreLabel()}}
+{\footnotesize\ttfamily void UIManager\+::\+Set\+Score\+Label (\begin{DoxyParamCaption}\item[{Ogre\+Bites\+::\+Label $\ast$}]{label }\end{DoxyParamCaption})}
+
+
+
+Changes the Score Labels label. 
+
+Allows for the Score Label to be initialized or set to different labels. 
+\begin{DoxyParams}{Parameters}
+{\em label} & is the Ogre\+Bites\+::\+Label pointer value the score label will be set too. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_u_i_manager_ac7d5312375ad5dcf731b991d78b66fbc}\label{class_u_i_manager_ac7d5312375ad5dcf731b991d78b66fbc}} 
+\index{UIManager@{UIManager}!SetTimePerUpdate@{SetTimePerUpdate}}
+\index{SetTimePerUpdate@{SetTimePerUpdate}!UIManager@{UIManager}}
+\doxysubsubsection{\texorpdfstring{SetTimePerUpdate()}{SetTimePerUpdate()}}
+{\footnotesize\ttfamily void UIManager\+::\+Set\+Time\+Per\+Update (\begin{DoxyParamCaption}\item[{Ogre\+Bites\+::\+Label $\ast$}]{label }\end{DoxyParamCaption})}
+
+
+
+Changes the numeric Time\+Per\+Update label. 
+
+Allows for the numeric Time\+Per\+Update label to be initialized or set to different labels. 
+\begin{DoxyParams}{Parameters}
+{\em label} & is the Ogre\+Bites\+::\+Label pointer value the numeric Time\+Per\+Update label will be set too. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_u_i_manager_a606aa92da4cff02a422b748cc86525aa}\label{class_u_i_manager_a606aa92da4cff02a422b748cc86525aa}} 
+\index{UIManager@{UIManager}!SetTimePerUpdateLabel@{SetTimePerUpdateLabel}}
+\index{SetTimePerUpdateLabel@{SetTimePerUpdateLabel}!UIManager@{UIManager}}
+\doxysubsubsection{\texorpdfstring{SetTimePerUpdateLabel()}{SetTimePerUpdateLabel()}}
+{\footnotesize\ttfamily void UIManager\+::\+Set\+Time\+Per\+Update\+Label (\begin{DoxyParamCaption}\item[{Ogre\+Bites\+::\+Label $\ast$}]{label }\end{DoxyParamCaption})}
+
+
+
+Changes the Time\+Per\+Update label. 
+
+Allows for the Time\+Per\+Update label to be initialized or set to different labels. 
+\begin{DoxyParams}{Parameters}
+{\em label} & is the Ogre\+Bites\+::\+Label pointer value the Time\+Per\+Update label will be set too. \\
+\hline
+\end{DoxyParams}

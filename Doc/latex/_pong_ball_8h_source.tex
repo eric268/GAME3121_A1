@@ -1,0 +1,47 @@
+\hypertarget{_pong_ball_8h_source}{}\doxysection{Pong\+Ball.\+h}
+\mbox{\hyperlink{_pong_ball_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{2 }
+\DoxyCodeLine{3 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_game_object_8h}{GameObject.h}}"{}}}
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_pong_paddle_8h}{PongPaddle.h}}"{}}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_collision_manager_8h}{CollisionManager.h}}"{}}}
+\DoxyCodeLine{6 }
+\DoxyCodeLine{10 \textcolor{keyword}{class }\mbox{\hyperlink{class_pong_ball}{PongBall}} : \textcolor{keyword}{public} \mbox{\hyperlink{class_game_object}{GameObject}}}
+\DoxyCodeLine{11 \{}
+\DoxyCodeLine{12 \textcolor{keyword}{private}:}
+\DoxyCodeLine{13     \textcolor{keywordtype}{bool} m\_bIsColliding;}
+\DoxyCodeLine{14     Ogre::Vector3 m\_vDirection;}
+\DoxyCodeLine{15     \mbox{\hyperlink{class_pong_paddle}{PongPaddle}}* m\_paddleRef;}
+\DoxyCodeLine{16     \textcolor{keywordtype}{float} m\_radius;}
+\DoxyCodeLine{17     }
+\DoxyCodeLine{18 }
+\DoxyCodeLine{19 \textcolor{keyword}{public}:}
+\DoxyCodeLine{20     \textcolor{comment}{//Constructor}}
+\DoxyCodeLine{21 }
+\DoxyCodeLine{24     \mbox{\hyperlink{class_pong_ball_a81a692dfac5dafcb37e33468b86aa09d}{PongBall}}();}
+\DoxyCodeLine{25 }
+\DoxyCodeLine{33     \mbox{\hyperlink{class_pong_ball_a81a692dfac5dafcb37e33468b86aa09d}{PongBall}}(Ogre::SceneNode* node, Ogre::SceneManager* scnMgr, \mbox{\hyperlink{class_pong_paddle}{PongPaddle}}* pRef);}
+\DoxyCodeLine{34 }
+\DoxyCodeLine{37     \mbox{\hyperlink{class_pong_ball_adf1eb67e3552bc745f18e4108c6f2dca}{\string~PongBall}}();}
+\DoxyCodeLine{38 }
+\DoxyCodeLine{43     \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_pong_ball_a51f57c0551a7f350afe8feb8108ad83e}{GetIsColliding}}();}
+\DoxyCodeLine{44 }
+\DoxyCodeLine{49     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_pong_ball_aa084bdcb977d17ffd8977c79a9c276b2}{SetIsColliding}}(\textcolor{keywordtype}{bool} colliding);}
+\DoxyCodeLine{50 }
+\DoxyCodeLine{54     \textcolor{keywordtype}{float} \mbox{\hyperlink{class_pong_ball_a2226ff2dbc6ba5d5363408464631b7fa}{GetRadius}}();}
+\DoxyCodeLine{55 }
+\DoxyCodeLine{56 }
+\DoxyCodeLine{61     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_pong_ball_af541a543feaeab9c71beacf45d3bed7d}{SetRadius}}(\textcolor{keywordtype}{float} radius);}
+\DoxyCodeLine{62 }
+\DoxyCodeLine{66     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_pong_ball_a898123b58ae250b2b9b982c022686be4}{CheckBounds}}();}
+\DoxyCodeLine{67 }
+\DoxyCodeLine{72     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_pong_ball_afde0e61af876f052e2d32f62e5dd697a}{CollisionWithPaddle}}();}
+\DoxyCodeLine{73 }
+\DoxyCodeLine{77     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_pong_ball_a848a8519ce73949ce436aae0f99f8704}{VelocityAfterPaddleCollision}}();}
+\DoxyCodeLine{78 }
+\DoxyCodeLine{84     \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_pong_ball_a5c4369c8b3f7e054bc1bf4d19cad9b7d}{frameStarted}}(\textcolor{keyword}{const} Ogre::FrameEvent\& evt);}
+\DoxyCodeLine{85 \};}
+\DoxyCodeLine{86 }
+
+\end{DoxyCode}

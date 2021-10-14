@@ -1,0 +1,259 @@
+\hypertarget{class_game_object}{}\doxysection{Game\+Object Class Reference}
+\label{class_game_object}\index{GameObject@{GameObject}}
+
+
+Parent class for all game objects.  
+
+
+
+
+{\ttfamily \#include $<$Game\+Object.\+h$>$}
+
+Inheritance diagram for Game\+Object\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_game_object}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+Ogre\+::\+Vector3 \mbox{\hyperlink{class_game_object_aa57aabfa73bbd497597a03e486252cf5}{Get\+Velocity}} ()
+\begin{DoxyCompactList}\small\item\em Returns game objects velocity. \end{DoxyCompactList}\item 
+Ogre\+::\+Scene\+Node $\ast$ \mbox{\hyperlink{class_game_object_ab4318d69bb450da55c6d5378d4b5220d}{Get\+Scene\+Node}} ()
+\begin{DoxyCompactList}\small\item\em Returns game objects scene node variable. \end{DoxyCompactList}\item 
+Ogre\+::\+Entity $\ast$ \mbox{\hyperlink{class_game_object_a2dab73dd0b60821a30ab475e27582ced}{Get\+Entity}} ()
+\begin{DoxyCompactList}\small\item\em Returns game objects entity variable. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_game_object_a3f2b756ddd208ae302add9cafe14a41b}{Get\+Speed}} ()
+\begin{DoxyCompactList}\small\item\em Returns the speed of the game object. \end{DoxyCompactList}\item 
+Ogre\+::\+Vector3 \mbox{\hyperlink{class_game_object_ae1b8f860867e0ca8d2b569a50918f283}{Get\+Scale}} ()
+\begin{DoxyCompactList}\small\item\em Returns the scale of the objects mesh. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_game_object_aeb3573c35c2fb24a473dbfb93f0d57ce}{Get\+Weight}} ()
+\begin{DoxyCompactList}\small\item\em Returns the weight of the object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_game_object_a04fe9afe3e01032ac5e75d06e06d5030}{Set\+Scene\+Node}} (Scene\+Node $\ast$node)
+\begin{DoxyCompactList}\small\item\em Sets the game objects scene node. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_game_object_a0d4df5eb686abee0d5737ca65e5cfa20}{Set\+Entity}} (Entity $\ast$en)
+\begin{DoxyCompactList}\small\item\em Sets the game objects entity node. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_game_object_a377792f486572749e60ed7bd82cf7d3e}{Set\+Velocity}} (Ogre\+::\+Vector3 vel)
+\begin{DoxyCompactList}\small\item\em Changes game objects velocity. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_game_object_af338ca76bcbb159c5510a3ebfe532f59}{Set\+Speed}} (float speed)
+\begin{DoxyCompactList}\small\item\em Changes game objects speed. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_game_object_a015cbab2150bcb9d30473651928b3d69}{Set\+Scale}} (Ogre\+::\+Vector3 scale)
+\begin{DoxyCompactList}\small\item\em Changes the scale of the game object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_game_object_a41ba78823da338bbd8f22269ca5c517e}{Set\+Weight}} (float weight)
+\begin{DoxyCompactList}\small\item\em Changes the game objects weight. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{class_game_object_a1173a94f187d10a39777398672c187c7}{frame\+Started}} (const Ogre\+::\+Frame\+Event \&evt)=0
+\begin{DoxyCompactList}\small\item\em Frame started updates game objects at each frame. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Parent class for all game objects. 
+
+A pure virtual class which is inherited from by all game objects Provides base variables and functionality to all game objects \begin{DoxyNote}{Note}
+Inherits from Frame\+Listener class 
+\end{DoxyNote}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_game_object_a1173a94f187d10a39777398672c187c7}\label{class_game_object_a1173a94f187d10a39777398672c187c7}} 
+\index{GameObject@{GameObject}!frameStarted@{frameStarted}}
+\index{frameStarted@{frameStarted}!GameObject@{GameObject}}
+\doxysubsubsection{\texorpdfstring{frameStarted()}{frameStarted()}}
+{\footnotesize\ttfamily virtual bool Game\+Object\+::frame\+Started (\begin{DoxyParamCaption}\item[{const Ogre\+::\+Frame\+Event \&}]{evt }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Frame started updates game objects at each frame. 
+
+Allows for changes to be implemented on game objects at the start of each frame. This is time independent therefore game objects will be updated consistently across all hardware 
+\begin{DoxyParams}{Parameters}
+{\em evt} & is a Frame\+Event reference which provides information such as time from last event and time from last frame. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+returns true if next frame should be started and false if next frame should not start and game should exit. 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+This is a pure virtual function as no game objects should be created. All future objects in game should start by inheriting from game objects. 
+\end{DoxyNote}
+
+
+Implemented in \mbox{\hyperlink{class_pong_ball_a5c4369c8b3f7e054bc1bf4d19cad9b7d}{Pong\+Ball}}, and \mbox{\hyperlink{class_pong_paddle_a5b621049de76473c689dda3b6aec9f2e}{Pong\+Paddle}}.
+
+\mbox{\Hypertarget{class_game_object_a2dab73dd0b60821a30ab475e27582ced}\label{class_game_object_a2dab73dd0b60821a30ab475e27582ced}} 
+\index{GameObject@{GameObject}!GetEntity@{GetEntity}}
+\index{GetEntity@{GetEntity}!GameObject@{GameObject}}
+\doxysubsubsection{\texorpdfstring{GetEntity()}{GetEntity()}}
+{\footnotesize\ttfamily Ogre\+::\+Entity $\ast$ Game\+Object\+::\+Get\+Entity (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Returns game objects entity variable. 
+
+The entity variable acts like the mesh of an object. This is where its bounding box, materials and more are controlled. \begin{DoxyReturn}{Returns}
+Entity pointer. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_game_object_ae1b8f860867e0ca8d2b569a50918f283}\label{class_game_object_ae1b8f860867e0ca8d2b569a50918f283}} 
+\index{GameObject@{GameObject}!GetScale@{GetScale}}
+\index{GetScale@{GetScale}!GameObject@{GameObject}}
+\doxysubsubsection{\texorpdfstring{GetScale()}{GetScale()}}
+{\footnotesize\ttfamily Ogre\+::\+Vector3 Game\+Object\+::\+Get\+Scale (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Returns the scale of the objects mesh. 
+
+The scale of the object is used to determine it\textquotesingle{}s current bounding box size. This is especially important for collision detection . \begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{class_collision_manager_acc0f7fa0dfd29d004d6492926586a3ac}{Collision\+Manager\+::\+AABBSphere(\+Game\+Object$\ast$ cube, Game\+Object$\ast$ sphere)}}. 
+\end{DoxySeeAlso}
+\begin{DoxyReturn}{Returns}
+Ogre\+::\+Vector3 value. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_game_object_ab4318d69bb450da55c6d5378d4b5220d}\label{class_game_object_ab4318d69bb450da55c6d5378d4b5220d}} 
+\index{GameObject@{GameObject}!GetSceneNode@{GetSceneNode}}
+\index{GetSceneNode@{GetSceneNode}!GameObject@{GameObject}}
+\doxysubsubsection{\texorpdfstring{GetSceneNode()}{GetSceneNode()}}
+{\footnotesize\ttfamily Ogre\+::\+Scene\+Node $\ast$ Game\+Object\+::\+Get\+Scene\+Node (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Returns game objects scene node variable. 
+
+The Scene node controls main functionality of game objects. Such functionality is getting and setting the game objects position. \begin{DoxyReturn}{Returns}
+Scene\+Node pointer. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_game_object_a3f2b756ddd208ae302add9cafe14a41b}\label{class_game_object_a3f2b756ddd208ae302add9cafe14a41b}} 
+\index{GameObject@{GameObject}!GetSpeed@{GetSpeed}}
+\index{GetSpeed@{GetSpeed}!GameObject@{GameObject}}
+\doxysubsubsection{\texorpdfstring{GetSpeed()}{GetSpeed()}}
+{\footnotesize\ttfamily float Game\+Object\+::\+Get\+Speed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Returns the speed of the game object. 
+
+The speed is what is used with direction to calculate objects velocity. \begin{DoxyReturn}{Returns}
+floating point value. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_game_object_aa57aabfa73bbd497597a03e486252cf5}\label{class_game_object_aa57aabfa73bbd497597a03e486252cf5}} 
+\index{GameObject@{GameObject}!GetVelocity@{GetVelocity}}
+\index{GetVelocity@{GetVelocity}!GameObject@{GameObject}}
+\doxysubsubsection{\texorpdfstring{GetVelocity()}{GetVelocity()}}
+{\footnotesize\ttfamily Ogre\+::\+Vector3 Game\+Object\+::\+Get\+Velocity (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Returns game objects velocity. 
+
+\begin{DoxyReturn}{Returns}
+Ogre\+::\+Vector3. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_game_object_aeb3573c35c2fb24a473dbfb93f0d57ce}\label{class_game_object_aeb3573c35c2fb24a473dbfb93f0d57ce}} 
+\index{GameObject@{GameObject}!GetWeight@{GetWeight}}
+\index{GetWeight@{GetWeight}!GameObject@{GameObject}}
+\doxysubsubsection{\texorpdfstring{GetWeight()}{GetWeight()}}
+{\footnotesize\ttfamily float Game\+Object\+::\+Get\+Weight (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Returns the weight of the object. 
+
+This was initially used for detecting change in velocity when ball and paddle hit. Currently this is not important but still instantiated for future potential use. \begin{DoxyReturn}{Returns}
+Returns a floating number. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_game_object_a0d4df5eb686abee0d5737ca65e5cfa20}\label{class_game_object_a0d4df5eb686abee0d5737ca65e5cfa20}} 
+\index{GameObject@{GameObject}!SetEntity@{SetEntity}}
+\index{SetEntity@{SetEntity}!GameObject@{GameObject}}
+\doxysubsubsection{\texorpdfstring{SetEntity()}{SetEntity()}}
+{\footnotesize\ttfamily void Game\+Object\+::\+Set\+Entity (\begin{DoxyParamCaption}\item[{Entity $\ast$}]{en }\end{DoxyParamCaption})}
+
+
+
+Sets the game objects entity node. 
+
+Allows for game objects to instantiate or change entities. 
+\begin{DoxyParams}{Parameters}
+{\em en} & is the entity that the game object will be set to. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_game_object_a015cbab2150bcb9d30473651928b3d69}\label{class_game_object_a015cbab2150bcb9d30473651928b3d69}} 
+\index{GameObject@{GameObject}!SetScale@{SetScale}}
+\index{SetScale@{SetScale}!GameObject@{GameObject}}
+\doxysubsubsection{\texorpdfstring{SetScale()}{SetScale()}}
+{\footnotesize\ttfamily void Game\+Object\+::\+Set\+Scale (\begin{DoxyParamCaption}\item[{Ogre\+::\+Vector3}]{scale }\end{DoxyParamCaption})}
+
+
+
+Changes the scale of the game object. 
+
+Allows for the game objects scale to be initialized or set to different values. 
+\begin{DoxyParams}{Parameters}
+{\em scale} & is the Ogre\+::\+Vector3 value that the game objects scale will be set to. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+This is very important for collision detection as changing the bounding box without changing the scale will result in inaccurate collision detection. 
+\end{DoxyNote}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{class_collision_manager_acc0f7fa0dfd29d004d6492926586a3ac}{Collision\+Manager\+::\+AABBSphere(\+Game\+Object$\ast$ cube, Game\+Object$\ast$ sphere)}}. 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{class_game_object_a04fe9afe3e01032ac5e75d06e06d5030}\label{class_game_object_a04fe9afe3e01032ac5e75d06e06d5030}} 
+\index{GameObject@{GameObject}!SetSceneNode@{SetSceneNode}}
+\index{SetSceneNode@{SetSceneNode}!GameObject@{GameObject}}
+\doxysubsubsection{\texorpdfstring{SetSceneNode()}{SetSceneNode()}}
+{\footnotesize\ttfamily void Game\+Object\+::\+Set\+Scene\+Node (\begin{DoxyParamCaption}\item[{Scene\+Node $\ast$}]{node }\end{DoxyParamCaption})}
+
+
+
+Sets the game objects scene node. 
+
+Allows for game objects to instantiate or change scene nodes. 
+\begin{DoxyParams}{Parameters}
+{\em node} & is the Scene node that the game object will be set to. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_game_object_af338ca76bcbb159c5510a3ebfe532f59}\label{class_game_object_af338ca76bcbb159c5510a3ebfe532f59}} 
+\index{GameObject@{GameObject}!SetSpeed@{SetSpeed}}
+\index{SetSpeed@{SetSpeed}!GameObject@{GameObject}}
+\doxysubsubsection{\texorpdfstring{SetSpeed()}{SetSpeed()}}
+{\footnotesize\ttfamily void Game\+Object\+::\+Set\+Speed (\begin{DoxyParamCaption}\item[{float}]{speed }\end{DoxyParamCaption})}
+
+
+
+Changes game objects speed. 
+
+Allows for game objects speed to be initialized or set to different values. 
+\begin{DoxyParams}{Parameters}
+{\em speed} & is the floating point value the game objects speed will be set to. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_game_object_a377792f486572749e60ed7bd82cf7d3e}\label{class_game_object_a377792f486572749e60ed7bd82cf7d3e}} 
+\index{GameObject@{GameObject}!SetVelocity@{SetVelocity}}
+\index{SetVelocity@{SetVelocity}!GameObject@{GameObject}}
+\doxysubsubsection{\texorpdfstring{SetVelocity()}{SetVelocity()}}
+{\footnotesize\ttfamily void Game\+Object\+::\+Set\+Velocity (\begin{DoxyParamCaption}\item[{Ogre\+::\+Vector3}]{vel }\end{DoxyParamCaption})}
+
+
+
+Changes game objects velocity. 
+
+Allows for game objects velocity to be initialized or set to different values. 
+\begin{DoxyParams}{Parameters}
+{\em vel} & is the Ogre\+::\+Vector3 velocity that the game object will be set to. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_game_object_a41ba78823da338bbd8f22269ca5c517e}\label{class_game_object_a41ba78823da338bbd8f22269ca5c517e}} 
+\index{GameObject@{GameObject}!SetWeight@{SetWeight}}
+\index{SetWeight@{SetWeight}!GameObject@{GameObject}}
+\doxysubsubsection{\texorpdfstring{SetWeight()}{SetWeight()}}
+{\footnotesize\ttfamily void Game\+Object\+::\+Set\+Weight (\begin{DoxyParamCaption}\item[{float}]{weight }\end{DoxyParamCaption})}
+
+
+
+Changes the game objects weight. 
+
+Allows for the game objects weight to be initialized or set to different values 
+\begin{DoxyParams}{Parameters}
+{\em weight} & is the floating point value the game objects weight will be set too. \\
+\hline
+\end{DoxyParams}

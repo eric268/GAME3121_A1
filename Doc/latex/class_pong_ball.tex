@@ -1,0 +1,207 @@
+\hypertarget{class_pong_ball}{}\doxysection{Pong\+Ball Class Reference}
+\label{class_pong_ball}\index{PongBall@{PongBall}}
+
+
+The class which controls all Pong Ball functionality.  
+
+
+
+
+{\ttfamily \#include $<$Pong\+Ball.\+h$>$}
+
+Inheritance diagram for Pong\+Ball\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_pong_ball}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_pong_ball_a81a692dfac5dafcb37e33468b86aa09d}{Pong\+Ball}} ()
+\begin{DoxyCompactList}\small\item\em Default constructor for the \mbox{\hyperlink{class_pong_ball}{Pong\+Ball}} game object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_pong_ball_a29e87423263aa3c10f835ba6ad9e7ec7}{Pong\+Ball}} (Ogre\+::\+Scene\+Node $\ast$node, Ogre\+::\+Scene\+Manager $\ast$scn\+Mgr, \mbox{\hyperlink{class_pong_paddle}{Pong\+Paddle}} $\ast$p\+Ref)
+\begin{DoxyCompactList}\small\item\em Overloaded constructor for the \mbox{\hyperlink{class_pong_ball}{Pong\+Ball}} game object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_pong_ball_adf1eb67e3552bc745f18e4108c6f2dca}{$\sim$\+Pong\+Ball}} ()
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_pong_ball}{Pong\+Ball}} Destructor. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_pong_ball_a51f57c0551a7f350afe8feb8108ad83e}{Get\+Is\+Colliding}} ()
+\begin{DoxyCompactList}\small\item\em Returns whether or not the ball is colliding. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_pong_ball_aa084bdcb977d17ffd8977c79a9c276b2}{Set\+Is\+Colliding}} (bool colliding)
+\begin{DoxyCompactList}\small\item\em Sets the is\+Colliding ball variable. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_pong_ball_a2226ff2dbc6ba5d5363408464631b7fa}{Get\+Radius}} ()
+\begin{DoxyCompactList}\small\item\em Returns whether the radius of the \mbox{\hyperlink{class_pong_ball}{Pong\+Ball}} game object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_pong_ball_af541a543feaeab9c71beacf45d3bed7d}{Set\+Radius}} (float radius)
+\begin{DoxyCompactList}\small\item\em Sets the radius ball variable. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_pong_ball_a898123b58ae250b2b9b982c022686be4}{Check\+Bounds}} ()
+\begin{DoxyCompactList}\small\item\em Ensures the ball stays within the desired screen bounds. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_pong_ball_afde0e61af876f052e2d32f62e5dd697a}{Collision\+With\+Paddle}} ()
+\begin{DoxyCompactList}\small\item\em This function is called when the ball collides with the paddle. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_pong_ball_a848a8519ce73949ce436aae0f99f8704}{Velocity\+After\+Paddle\+Collision}} ()
+\begin{DoxyCompactList}\small\item\em Updates ball velocity upon collision. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_pong_ball_a5c4369c8b3f7e054bc1bf4d19cad9b7d}{frame\+Started}} (const Ogre\+::\+Frame\+Event \&evt)
+\begin{DoxyCompactList}\small\item\em Overrides the bool \mbox{\hyperlink{class_game_object_a1173a94f187d10a39777398672c187c7}{Game\+Object\+::frame\+Started(const Ogre\+::\+Frame\+Event\& evt)}} function found in \mbox{\hyperlink{_game_object_8h}{Game\+Object.\+h}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The class which controls all Pong Ball functionality. 
+
+This class encapsulates and updates all variables and functions associated with the pong ball game object. It inherits from the Game Object class. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_pong_ball_a81a692dfac5dafcb37e33468b86aa09d}\label{class_pong_ball_a81a692dfac5dafcb37e33468b86aa09d}} 
+\index{PongBall@{PongBall}!PongBall@{PongBall}}
+\index{PongBall@{PongBall}!PongBall@{PongBall}}
+\doxysubsubsection{\texorpdfstring{PongBall()}{PongBall()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Pong\+Ball\+::\+Pong\+Ball (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Default constructor for the \mbox{\hyperlink{class_pong_ball}{Pong\+Ball}} game object. 
+
+\mbox{\Hypertarget{class_pong_ball_a29e87423263aa3c10f835ba6ad9e7ec7}\label{class_pong_ball_a29e87423263aa3c10f835ba6ad9e7ec7}} 
+\index{PongBall@{PongBall}!PongBall@{PongBall}}
+\index{PongBall@{PongBall}!PongBall@{PongBall}}
+\doxysubsubsection{\texorpdfstring{PongBall()}{PongBall()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Pong\+Ball\+::\+Pong\+Ball (\begin{DoxyParamCaption}\item[{Ogre\+::\+Scene\+Node $\ast$}]{node,  }\item[{Ogre\+::\+Scene\+Manager $\ast$}]{scn\+Mgr,  }\item[{\mbox{\hyperlink{class_pong_paddle}{Pong\+Paddle}} $\ast$}]{p\+Ref }\end{DoxyParamCaption})}
+
+
+
+Overloaded constructor for the \mbox{\hyperlink{class_pong_ball}{Pong\+Ball}} game object. 
+
+This initializes all variables from either the inherited game object of \mbox{\hyperlink{class_pong_ball}{Pong\+Ball}} specific variables. 
+\begin{DoxyParams}{Parameters}
+{\em node} & This takes in a Scene\+Node pointer to the scene node created for the player paddle. \\
+\hline
+{\em scn\+Mgr} & This takes in a reference to the Scene\+Manager pointer found in the \mbox{\hyperlink{class_main_initalizer}{Main\+Initalizer}} class in \mbox{\hyperlink{_main_8cpp}{main.\+cpp}}. \\
+\hline
+{\em p\+Ref} & This is a \mbox{\hyperlink{class_pong_paddle}{Pong\+Paddle}} reference that is used for collision detection between the player paddle and the ball. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+The ball is the game object that handles collision between the paddle and it\textquotesingle{}s self. This is because their is no collision response for the paddle, only for the ball. 
+\end{DoxyNote}
+\mbox{\Hypertarget{class_pong_ball_adf1eb67e3552bc745f18e4108c6f2dca}\label{class_pong_ball_adf1eb67e3552bc745f18e4108c6f2dca}} 
+\index{PongBall@{PongBall}!````~PongBall@{$\sim$PongBall}}
+\index{````~PongBall@{$\sim$PongBall}!PongBall@{PongBall}}
+\doxysubsubsection{\texorpdfstring{$\sim$PongBall()}{~PongBall()}}
+{\footnotesize\ttfamily Pong\+Ball\+::$\sim$\+Pong\+Ball (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{class_pong_ball}{Pong\+Ball}} Destructor. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_pong_ball_a898123b58ae250b2b9b982c022686be4}\label{class_pong_ball_a898123b58ae250b2b9b982c022686be4}} 
+\index{PongBall@{PongBall}!CheckBounds@{CheckBounds}}
+\index{CheckBounds@{CheckBounds}!PongBall@{PongBall}}
+\doxysubsubsection{\texorpdfstring{CheckBounds()}{CheckBounds()}}
+{\footnotesize\ttfamily void Pong\+Ball\+::\+Check\+Bounds (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Ensures the ball stays within the desired screen bounds. 
+
+This function ensures that the ball will bounce off the top, left and right bounds of the window. If the ball falls into the protected area this function also returns it to its starting location and notifies the \mbox{\hyperlink{class_u_i_manager}{UIManager}} that it needs to update the remaining lives labels. \mbox{\Hypertarget{class_pong_ball_afde0e61af876f052e2d32f62e5dd697a}\label{class_pong_ball_afde0e61af876f052e2d32f62e5dd697a}} 
+\index{PongBall@{PongBall}!CollisionWithPaddle@{CollisionWithPaddle}}
+\index{CollisionWithPaddle@{CollisionWithPaddle}!PongBall@{PongBall}}
+\doxysubsubsection{\texorpdfstring{CollisionWithPaddle()}{CollisionWithPaddle()}}
+{\footnotesize\ttfamily void Pong\+Ball\+::\+Collision\+With\+Paddle (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+This function is called when the ball collides with the paddle. 
+
+This function offsets any overlap between the colliding game objects. It then calls a \mbox{\hyperlink{class_pong_ball_a848a8519ce73949ce436aae0f99f8704}{Velocity\+After\+Paddle\+Collision()}} to update the balls velocity. \begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{class_pong_ball_a848a8519ce73949ce436aae0f99f8704}{Velocity\+After\+Paddle\+Collision()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{class_pong_ball_a5c4369c8b3f7e054bc1bf4d19cad9b7d}\label{class_pong_ball_a5c4369c8b3f7e054bc1bf4d19cad9b7d}} 
+\index{PongBall@{PongBall}!frameStarted@{frameStarted}}
+\index{frameStarted@{frameStarted}!PongBall@{PongBall}}
+\doxysubsubsection{\texorpdfstring{frameStarted()}{frameStarted()}}
+{\footnotesize\ttfamily bool Pong\+Ball\+::frame\+Started (\begin{DoxyParamCaption}\item[{const Ogre\+::\+Frame\+Event \&}]{evt }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Overrides the bool \mbox{\hyperlink{class_game_object_a1173a94f187d10a39777398672c187c7}{Game\+Object\+::frame\+Started(const Ogre\+::\+Frame\+Event\& evt)}} function found in \mbox{\hyperlink{_game_object_8h}{Game\+Object.\+h}}. 
+
+Checks for updates at the beginning of each frame for all Pong Ball objects. Is updates at a constant time across all hardware. 
+\begin{DoxyParams}{Parameters}
+{\em evt} & Provides information regarding the time since the last event and the time since last update for each Pong Ball objects. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns true if next frame should be updated and false if next frame should not be updated and the game should be exited. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_game_object_a1173a94f187d10a39777398672c187c7}{Game\+Object}}.
+
+\mbox{\Hypertarget{class_pong_ball_a51f57c0551a7f350afe8feb8108ad83e}\label{class_pong_ball_a51f57c0551a7f350afe8feb8108ad83e}} 
+\index{PongBall@{PongBall}!GetIsColliding@{GetIsColliding}}
+\index{GetIsColliding@{GetIsColliding}!PongBall@{PongBall}}
+\doxysubsubsection{\texorpdfstring{GetIsColliding()}{GetIsColliding()}}
+{\footnotesize\ttfamily bool Pong\+Ball\+::\+Get\+Is\+Colliding (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Returns whether or not the ball is colliding. 
+
+This value only returns true if the ball is colliding with the player paddle, and returns false when it is not. \begin{DoxyReturn}{Returns}
+Returns a boolean. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_pong_ball_a2226ff2dbc6ba5d5363408464631b7fa}\label{class_pong_ball_a2226ff2dbc6ba5d5363408464631b7fa}} 
+\index{PongBall@{PongBall}!GetRadius@{GetRadius}}
+\index{GetRadius@{GetRadius}!PongBall@{PongBall}}
+\doxysubsubsection{\texorpdfstring{GetRadius()}{GetRadius()}}
+{\footnotesize\ttfamily float Pong\+Ball\+::\+Get\+Radius (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Returns whether the radius of the \mbox{\hyperlink{class_pong_ball}{Pong\+Ball}} game object. 
+
+\begin{DoxyReturn}{Returns}
+Returns a floating point value. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_pong_ball_aa084bdcb977d17ffd8977c79a9c276b2}\label{class_pong_ball_aa084bdcb977d17ffd8977c79a9c276b2}} 
+\index{PongBall@{PongBall}!SetIsColliding@{SetIsColliding}}
+\index{SetIsColliding@{SetIsColliding}!PongBall@{PongBall}}
+\doxysubsubsection{\texorpdfstring{SetIsColliding()}{SetIsColliding()}}
+{\footnotesize\ttfamily void Pong\+Ball\+::\+Set\+Is\+Colliding (\begin{DoxyParamCaption}\item[{bool}]{colliding }\end{DoxyParamCaption})}
+
+
+
+Sets the is\+Colliding ball variable. 
+
+Initializes or sets the is\+Colliding ball variable to the parameter. 
+\begin{DoxyParams}{Parameters}
+{\em colliding} & is a boolean that the is\+Colliding ball variable will be set to. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_pong_ball_af541a543feaeab9c71beacf45d3bed7d}\label{class_pong_ball_af541a543feaeab9c71beacf45d3bed7d}} 
+\index{PongBall@{PongBall}!SetRadius@{SetRadius}}
+\index{SetRadius@{SetRadius}!PongBall@{PongBall}}
+\doxysubsubsection{\texorpdfstring{SetRadius()}{SetRadius()}}
+{\footnotesize\ttfamily void Pong\+Ball\+::\+Set\+Radius (\begin{DoxyParamCaption}\item[{float}]{radius }\end{DoxyParamCaption})}
+
+
+
+Sets the radius ball variable. 
+
+Initializes or sets the radius of the \mbox{\hyperlink{class_pong_ball}{Pong\+Ball}} game object. This value is usually based upon the scale of the ball as well as its initial mesh extends. 
+\begin{DoxyParams}{Parameters}
+{\em radius} & is a floating point value that ball radius variable will be set to. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_pong_ball_a848a8519ce73949ce436aae0f99f8704}\label{class_pong_ball_a848a8519ce73949ce436aae0f99f8704}} 
+\index{PongBall@{PongBall}!VelocityAfterPaddleCollision@{VelocityAfterPaddleCollision}}
+\index{VelocityAfterPaddleCollision@{VelocityAfterPaddleCollision}!PongBall@{PongBall}}
+\doxysubsubsection{\texorpdfstring{VelocityAfterPaddleCollision()}{VelocityAfterPaddleCollision()}}
+{\footnotesize\ttfamily void Pong\+Ball\+::\+Velocity\+After\+Paddle\+Collision (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Updates ball velocity upon collision. 
+
+This function is called when the ball collides with the paddle. This updates the ball\textquotesingle{}s velocity based upon the velocity of the player paddle. 

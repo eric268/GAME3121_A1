@@ -1,0 +1,51 @@
+\hypertarget{_pong_paddle_8h_source}{}\doxysection{Pong\+Paddle.\+h}
+\mbox{\hyperlink{_pong_paddle_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{2 }
+\DoxyCodeLine{3 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_game_object_8h}{GameObject.h}}"{}}}
+\DoxyCodeLine{4 }
+\DoxyCodeLine{8 \textcolor{keyword}{class }\mbox{\hyperlink{class_pong_paddle}{PongPaddle}} : \textcolor{keyword}{public} \mbox{\hyperlink{class_game_object}{GameObject}}}
+\DoxyCodeLine{9 \{}
+\DoxyCodeLine{10 \textcolor{keyword}{private}:}
+\DoxyCodeLine{11     \textcolor{keywordtype}{float} m\_fBounds;}
+\DoxyCodeLine{12     \textcolor{keywordtype}{int} m\_iScore;}
+\DoxyCodeLine{13     \textcolor{keywordtype}{int} m\_iLivesRemaining;}
+\DoxyCodeLine{14 }
+\DoxyCodeLine{15     \textcolor{keywordtype}{bool} m\_lifeLost;}
+\DoxyCodeLine{16     \textcolor{keywordtype}{bool} m\_pointEarned;}
+\DoxyCodeLine{17 \textcolor{keyword}{public}:}
+\DoxyCodeLine{21     \mbox{\hyperlink{class_pong_paddle_a2cb49a6cc7444880bbe475fe5f61d8f2}{PongPaddle}}();}
+\DoxyCodeLine{22 }
+\DoxyCodeLine{28     \mbox{\hyperlink{class_pong_paddle_a2cb49a6cc7444880bbe475fe5f61d8f2}{PongPaddle}}(Ogre::SceneNode* player, Ogre::SceneManager* scnMgr);}
+\DoxyCodeLine{29 }
+\DoxyCodeLine{32     \mbox{\hyperlink{class_pong_paddle_a0fc2e1761f096877f4cbb1d83984ee90}{\string~PongPaddle}}();}
+\DoxyCodeLine{33 }
+\DoxyCodeLine{37     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_pong_paddle_aaba3d8b17067eeaf049eb7ff211e6212}{BoundsChecking}}();}
+\DoxyCodeLine{38 }
+\DoxyCodeLine{42     \textcolor{keywordtype}{int} \mbox{\hyperlink{class_pong_paddle_a0fe86cf4d73e027d47b1eb85c5049fc9}{GetScore}}();}
+\DoxyCodeLine{43 }
+\DoxyCodeLine{47     \textcolor{keywordtype}{int} \mbox{\hyperlink{class_pong_paddle_aa018cc5bab5ce4b06e8631325c92e567}{GetLivesRemaining}}();}
+\DoxyCodeLine{48 }
+\DoxyCodeLine{53     \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_pong_paddle_adb3a62c6f1f7e5067efb3e229799788e}{GetLifeLost}}();}
+\DoxyCodeLine{54 }
+\DoxyCodeLine{59     \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_pong_paddle_ac2a83b27db44409c8930b573525a6957}{GetPointEarned}}();}
+\DoxyCodeLine{60 }
+\DoxyCodeLine{63     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_pong_paddle_a79c02a31e66a90362a3ce37bbac89214}{IncrementScore}}();}
+\DoxyCodeLine{64 }
+\DoxyCodeLine{67     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_pong_paddle_afadddfa37c5223f70d1997b6ac78bca5}{DecrementLivesRemaining}}();}
+\DoxyCodeLine{68 }
+\DoxyCodeLine{73     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_pong_paddle_ae508eb949562460d304ec81f1256b4b4}{SetScore}}(\textcolor{keywordtype}{int} score);}
+\DoxyCodeLine{74 }
+\DoxyCodeLine{79     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_pong_paddle_aab8a5e3284e0fbde11aff99098a1bc88}{SetLivesRemaining}}(\textcolor{keywordtype}{int} livesRemaining);}
+\DoxyCodeLine{80 }
+\DoxyCodeLine{85     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_pong_paddle_ab7cd4cc7835841fd80e32873d39fc297}{SetPointEarned}}(\textcolor{keywordtype}{bool} pEarned);}
+\DoxyCodeLine{86 }
+\DoxyCodeLine{91     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_pong_paddle_aba074193abbd2d5b04beab02f21028d8}{SetLifeLabel}}(\textcolor{keywordtype}{bool} lifeLost);}
+\DoxyCodeLine{92 }
+\DoxyCodeLine{98     \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_pong_paddle_a5b621049de76473c689dda3b6aec9f2e}{frameStarted}}(\textcolor{keyword}{const} Ogre::FrameEvent\& evt);}
+\DoxyCodeLine{99 \};}
+\DoxyCodeLine{100 }
+\DoxyCodeLine{101 }
+
+\end{DoxyCode}

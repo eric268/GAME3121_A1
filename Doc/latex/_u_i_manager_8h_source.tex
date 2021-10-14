@@ -1,0 +1,86 @@
+\hypertarget{_u_i_manager_8h_source}{}\doxysection{UIManager.\+h}
+\mbox{\hyperlink{_u_i_manager_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#include "{}OgreTrays.h"{}}}
+\DoxyCodeLine{3 \textcolor{preprocessor}{\#include "{}Ogre.h"{}}}
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include "{}OgreInput.h"{}}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_pong_ball_8h}{PongBall.h}}"{}}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_pong_paddle_8h}{PongPaddle.h}}"{}}}
+\DoxyCodeLine{7 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_collision_manager_8h}{CollisionManager.h}}"{}}}
+\DoxyCodeLine{8 }
+\DoxyCodeLine{9 \textcolor{keyword}{using namespace }Ogre;}
+\DoxyCodeLine{10 \textcolor{keyword}{using namespace }OgreBites;}
+\DoxyCodeLine{11 }
+\DoxyCodeLine{15 \textcolor{keyword}{class }\mbox{\hyperlink{class_u_i_manager}{UIManager}} : \textcolor{keyword}{public} Ogre::FrameListener}
+\DoxyCodeLine{16 \{}
+\DoxyCodeLine{17 \textcolor{keyword}{private}:}
+\DoxyCodeLine{18 }
+\DoxyCodeLine{19     \textcolor{keywordtype}{float} fpsCounter = 0.0f;}
+\DoxyCodeLine{20     \textcolor{keywordtype}{float} fpsTotal = 0.0f;}
+\DoxyCodeLine{21     \textcolor{keywordtype}{float} timer = 0.0f;}
+\DoxyCodeLine{22 }
+\DoxyCodeLine{23     \textcolor{comment}{//Labels}}
+\DoxyCodeLine{24     OgreBites::Label* mScoreLabel;}
+\DoxyCodeLine{25     OgreBites::Label* mScore;}
+\DoxyCodeLine{26 }
+\DoxyCodeLine{27     OgreBites::Label* mLivesLabel;}
+\DoxyCodeLine{28     OgreBites::Label* mLives;}
+\DoxyCodeLine{29 }
+\DoxyCodeLine{30     OgreBites::Label* m\_FPSLabel;}
+\DoxyCodeLine{31     OgreBites::Label* m\_FPS;}
+\DoxyCodeLine{32 }
+\DoxyCodeLine{33     OgreBites::Label* m\_TimePerUpdateLabel;}
+\DoxyCodeLine{34     OgreBites::Label* m\_TimePerUpdate;}
+\DoxyCodeLine{35 }
+\DoxyCodeLine{36 }
+\DoxyCodeLine{37     \mbox{\hyperlink{class_pong_paddle}{PongPaddle}}* m\_paddleRef;}
+\DoxyCodeLine{38     \mbox{\hyperlink{class_pong_ball}{PongBall}}* m\_ballRef;}
+\DoxyCodeLine{39 }
+\DoxyCodeLine{40     OgreBites::TrayManager* mTrayMgr;}
+\DoxyCodeLine{41 \textcolor{keyword}{public}:}
+\DoxyCodeLine{45     \mbox{\hyperlink{class_u_i_manager_a32b72c377f864f7cd197e6ffe738142f}{UIManager}}();}
+\DoxyCodeLine{46 }
+\DoxyCodeLine{53     \mbox{\hyperlink{class_u_i_manager_a32b72c377f864f7cd197e6ffe738142f}{UIManager}}(OgreBites::TrayManager* mTrayMgr, \mbox{\hyperlink{class_pong_paddle}{PongPaddle}}* paddleRef, \mbox{\hyperlink{class_pong_ball}{PongBall}}* ballRef);}
+\DoxyCodeLine{54 }
+\DoxyCodeLine{59     \mbox{\hyperlink{class_u_i_manager_aeac3e2a8fd4ba49821ce653f4d2fa6b6}{\string~UIManager}}();}
+\DoxyCodeLine{60 }
+\DoxyCodeLine{63     OgreBites::Label* \mbox{\hyperlink{class_u_i_manager_a57abce5414609f8486726affb83810be}{GetScoreLabel}}();}
+\DoxyCodeLine{64 }
+\DoxyCodeLine{67     OgreBites::Label* \mbox{\hyperlink{class_u_i_manager_a032f1acca837c257edbda62667dab06c}{GetScore}}();}
+\DoxyCodeLine{68 }
+\DoxyCodeLine{71     OgreBites::Label* \mbox{\hyperlink{class_u_i_manager_a4958a4bbd056c260382511ef79857473}{GetLivesLabel}}();}
+\DoxyCodeLine{72 }
+\DoxyCodeLine{75     OgreBites::Label* \mbox{\hyperlink{class_u_i_manager_aed3616cf275318481823442810bf7b04}{GetLives}}();}
+\DoxyCodeLine{76 }
+\DoxyCodeLine{79     OgreBites::Label* \mbox{\hyperlink{class_u_i_manager_a2a1513a9eb4207e2164b300889812661}{GetTimePerUpdateLabel}}();}
+\DoxyCodeLine{80 }
+\DoxyCodeLine{83     OgreBites::Label* \mbox{\hyperlink{class_u_i_manager_aeca29cee369c4758146266787a97c36b}{GetTimePerUpdate}}();}
+\DoxyCodeLine{84 }
+\DoxyCodeLine{87     OgreBites::Label* \mbox{\hyperlink{class_u_i_manager_ae4d21520e50a8995fbb53c587b97ab65}{GetFPSLabel}}();}
+\DoxyCodeLine{88 }
+\DoxyCodeLine{91     OgreBites::Label* \mbox{\hyperlink{class_u_i_manager_abd79ee99b5d749c1ede7963830209787}{GetFPS}}();}
+\DoxyCodeLine{92 }
+\DoxyCodeLine{97     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_u_i_manager_abd47b9e7e26886bf252ca908f9491dd3}{CalculateFPS}}(\textcolor{keywordtype}{float} deltaTime);}
+\DoxyCodeLine{98 }
+\DoxyCodeLine{103     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_u_i_manager_a53e3f69844734e082a714deb6ad8620d}{SetScoreLabel}}(OgreBites::Label* label);}
+\DoxyCodeLine{104 }
+\DoxyCodeLine{109     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_u_i_manager_a693e4a39bb2583529f27d85c07ee76ca}{SetScore}}(OgreBites::Label* label);}
+\DoxyCodeLine{110 }
+\DoxyCodeLine{115     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_u_i_manager_ac25ffc970d5f15f4a43dcb29ef90fc0b}{SetLivesLabel}}(OgreBites::Label* label);}
+\DoxyCodeLine{116 }
+\DoxyCodeLine{121     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_u_i_manager_a23a48c2ed9da1903dc947edba4d62e19}{SetLives}}(OgreBites::Label* label);}
+\DoxyCodeLine{122 }
+\DoxyCodeLine{127     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_u_i_manager_a606aa92da4cff02a422b748cc86525aa}{SetTimePerUpdateLabel}}(OgreBites::Label* label);}
+\DoxyCodeLine{128 }
+\DoxyCodeLine{133     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_u_i_manager_ac7d5312375ad5dcf731b991d78b66fbc}{SetTimePerUpdate}}(OgreBites::Label* label);}
+\DoxyCodeLine{134 }
+\DoxyCodeLine{139     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_u_i_manager_a123aead2a14f0285cd85c2796e6a4195}{SetFPSLabel}}(OgreBites::Label* label);}
+\DoxyCodeLine{140 }
+\DoxyCodeLine{145     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_u_i_manager_a939d762852bb5ea3ce7d8424d6229b74}{SetFPS}}(OgreBites::Label* label);}
+\DoxyCodeLine{146 }
+\DoxyCodeLine{152     \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_u_i_manager_a2a08e0e79f7b060c72e2466d6e4cd601}{frameStarted}}(\textcolor{keyword}{const} Ogre::FrameEvent\& evt);}
+\DoxyCodeLine{153 \};}
+\DoxyCodeLine{154 }
+
+\end{DoxyCode}

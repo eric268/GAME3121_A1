@@ -1,0 +1,178 @@
+\hypertarget{class_main_initalizer}{}\doxysection{Main\+Initalizer Class Reference}
+\label{class_main_initalizer}\index{MainInitalizer@{MainInitalizer}}
+
+
+Class which initializes main game loop.  
+
+
+Inheritance diagram for Main\+Initalizer\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_main_initalizer}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_main_initalizer_a08a6d98fe65699beacfef26dc9597255}{Main\+Initalizer}} ()
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_main_initalizer}{Main\+Initalizer}} Constructor. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_main_initalizer_a877e181f7fbe6f2656e64edb8a4e60b5}{$\sim$\+Main\+Initalizer}} ()
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_main_initalizer}{Main\+Initalizer}} Destructor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_main_initalizer_a1c8b897bde0695775e7b4662e1556479}{setup}} ()
+\begin{DoxyCompactList}\small\item\em Creates most game objects. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_main_initalizer_a220fb8ca0db8dd5d635e4003faae7dba}{key\+Pressed}} (const Keyboard\+Event \&evt)
+\begin{DoxyCompactList}\small\item\em Checks if key has been pressed. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_main_initalizer_a9a1761aa1afc598c8e4a62eff77032f8}{key\+Released}} (const Keyboard\+Event \&evt)
+\begin{DoxyCompactList}\small\item\em Checks if key has been released. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_main_initalizer_a9d31b7943f71f7f5105dfd076b5fb6a6}{create\+Scene}} ()
+\begin{DoxyCompactList}\small\item\em Creates game objects in scene. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_main_initalizer_a992dc59e0ba493af8f502f4c86f2c732}{create\+Camera}} ()
+\begin{DoxyCompactList}\small\item\em Creates Camera. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_main_initalizer_a30fb3ee56da48a91d72ba34bc952ffaf}{Restart\+Game}} ()
+\begin{DoxyCompactList}\small\item\em Resets Game. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_main_initalizer_a0f61e56303d3bc0748ede0ffd95ef040}{create\+Frame\+Listener}} ()
+\begin{DoxyCompactList}\small\item\em Creates all frame listeners. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_main_initalizer_aff688c57f55fd062250fc23f6767373d}{Create\+Trays\+And\+Labels}} ()
+\begin{DoxyCompactList}\small\item\em Creates all UI elements. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class which initializes main game loop. 
+
+Creates and initializes main game objects such as Pong ball, paddle, UI and window 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_main_initalizer_a08a6d98fe65699beacfef26dc9597255}\label{class_main_initalizer_a08a6d98fe65699beacfef26dc9597255}} 
+\index{MainInitalizer@{MainInitalizer}!MainInitalizer@{MainInitalizer}}
+\index{MainInitalizer@{MainInitalizer}!MainInitalizer@{MainInitalizer}}
+\doxysubsubsection{\texorpdfstring{MainInitalizer()}{MainInitalizer()}}
+{\footnotesize\ttfamily Main\+Initalizer\+::\+Main\+Initalizer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{class_main_initalizer}{Main\+Initalizer}} Constructor. 
+
+\mbox{\Hypertarget{class_main_initalizer_a877e181f7fbe6f2656e64edb8a4e60b5}\label{class_main_initalizer_a877e181f7fbe6f2656e64edb8a4e60b5}} 
+\index{MainInitalizer@{MainInitalizer}!````~MainInitalizer@{$\sim$MainInitalizer}}
+\index{````~MainInitalizer@{$\sim$MainInitalizer}!MainInitalizer@{MainInitalizer}}
+\doxysubsubsection{\texorpdfstring{$\sim$MainInitalizer()}{~MainInitalizer()}}
+{\footnotesize\ttfamily Main\+Initalizer\+::$\sim$\+Main\+Initalizer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+\mbox{\hyperlink{class_main_initalizer}{Main\+Initalizer}} Destructor. 
+
+Destroys all pointers owned and managed by \mbox{\hyperlink{class_main_initalizer}{Main\+Initalizer}} 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_main_initalizer_a992dc59e0ba493af8f502f4c86f2c732}\label{class_main_initalizer_a992dc59e0ba493af8f502f4c86f2c732}} 
+\index{MainInitalizer@{MainInitalizer}!createCamera@{createCamera}}
+\index{createCamera@{createCamera}!MainInitalizer@{MainInitalizer}}
+\doxysubsubsection{\texorpdfstring{createCamera()}{createCamera()}}
+{\footnotesize\ttfamily void Main\+Initalizer\+::create\+Camera (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Creates Camera. 
+
+Creates camera and initializes it\textquotesingle{}s near clipping planes, look at direction, position in world space and adds it to the viewport ~\newline
+ \mbox{\Hypertarget{class_main_initalizer_a0f61e56303d3bc0748ede0ffd95ef040}\label{class_main_initalizer_a0f61e56303d3bc0748ede0ffd95ef040}} 
+\index{MainInitalizer@{MainInitalizer}!createFrameListener@{createFrameListener}}
+\index{createFrameListener@{createFrameListener}!MainInitalizer@{MainInitalizer}}
+\doxysubsubsection{\texorpdfstring{createFrameListener()}{createFrameListener()}}
+{\footnotesize\ttfamily void Main\+Initalizer\+::create\+Frame\+Listener (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Creates all frame listeners. 
+
+Creates frame listeners for the UI, pong ball and pong paddle Then adds them to the root \mbox{\Hypertarget{class_main_initalizer_a9d31b7943f71f7f5105dfd076b5fb6a6}\label{class_main_initalizer_a9d31b7943f71f7f5105dfd076b5fb6a6}} 
+\index{MainInitalizer@{MainInitalizer}!createScene@{createScene}}
+\index{createScene@{createScene}!MainInitalizer@{MainInitalizer}}
+\doxysubsubsection{\texorpdfstring{createScene()}{createScene()}}
+{\footnotesize\ttfamily void Main\+Initalizer\+::create\+Scene (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Creates game objects in scene. 
+
+Creates base game objects such as plane, pong ball \& paddle, lighting \mbox{\Hypertarget{class_main_initalizer_aff688c57f55fd062250fc23f6767373d}\label{class_main_initalizer_aff688c57f55fd062250fc23f6767373d}} 
+\index{MainInitalizer@{MainInitalizer}!CreateTraysAndLabels@{CreateTraysAndLabels}}
+\index{CreateTraysAndLabels@{CreateTraysAndLabels}!MainInitalizer@{MainInitalizer}}
+\doxysubsubsection{\texorpdfstring{CreateTraysAndLabels()}{CreateTraysAndLabels()}}
+{\footnotesize\ttfamily void Main\+Initalizer\+::\+Create\+Trays\+And\+Labels (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Creates all UI elements. 
+
+Creates the tray manager and initializes \mbox{\hyperlink{class_u_i_manager}{UIManager}} variables \begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{class_u_i_manager}{UIManager()}} To see which variables are initalized for the UI 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{class_main_initalizer_a220fb8ca0db8dd5d635e4003faae7dba}\label{class_main_initalizer_a220fb8ca0db8dd5d635e4003faae7dba}} 
+\index{MainInitalizer@{MainInitalizer}!keyPressed@{keyPressed}}
+\index{keyPressed@{keyPressed}!MainInitalizer@{MainInitalizer}}
+\doxysubsubsection{\texorpdfstring{keyPressed()}{keyPressed()}}
+{\footnotesize\ttfamily bool Main\+Initalizer\+::key\+Pressed (\begin{DoxyParamCaption}\item[{const Keyboard\+Event \&}]{evt }\end{DoxyParamCaption})}
+
+
+
+Checks if key has been pressed. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em evt} & Gives information regarding which key has been pressed \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+{\bfseries{A}} -\/ Moves paddle to the left 
+
+{\bfseries{D}} -\/ Moves paddle to the right 
+
+{\bfseries{R}} -\/ Restarts game 
+
+{\bfseries{ESP}} -\/ Closes Window 
+\end{DoxyNote}
+\mbox{\Hypertarget{class_main_initalizer_a9a1761aa1afc598c8e4a62eff77032f8}\label{class_main_initalizer_a9a1761aa1afc598c8e4a62eff77032f8}} 
+\index{MainInitalizer@{MainInitalizer}!keyReleased@{keyReleased}}
+\index{keyReleased@{keyReleased}!MainInitalizer@{MainInitalizer}}
+\doxysubsubsection{\texorpdfstring{keyReleased()}{keyReleased()}}
+{\footnotesize\ttfamily bool Main\+Initalizer\+::key\+Released (\begin{DoxyParamCaption}\item[{const Keyboard\+Event \&}]{evt }\end{DoxyParamCaption})}
+
+
+
+Checks if key has been released. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em evt} & Gives information regarding which key has been released \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+{\bfseries{A}} -\/ Releases stops paddle from moving 
+
+{\bfseries{D}} -\/ Releases stops paddle from moving 
+\end{DoxyNote}
+\mbox{\Hypertarget{class_main_initalizer_a30fb3ee56da48a91d72ba34bc952ffaf}\label{class_main_initalizer_a30fb3ee56da48a91d72ba34bc952ffaf}} 
+\index{MainInitalizer@{MainInitalizer}!RestartGame@{RestartGame}}
+\index{RestartGame@{RestartGame}!MainInitalizer@{MainInitalizer}}
+\doxysubsubsection{\texorpdfstring{RestartGame()}{RestartGame()}}
+{\footnotesize\ttfamily void Main\+Initalizer\+::\+Restart\+Game (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Resets Game. 
+
+Resets all game variables to starting values. Resets all game objects to starting values and positions Is done by pressing the {\itshape r} key \mbox{\Hypertarget{class_main_initalizer_a1c8b897bde0695775e7b4662e1556479}\label{class_main_initalizer_a1c8b897bde0695775e7b4662e1556479}} 
+\index{MainInitalizer@{MainInitalizer}!setup@{setup}}
+\index{setup@{setup}!MainInitalizer@{MainInitalizer}}
+\doxysubsubsection{\texorpdfstring{setup()}{setup()}}
+{\footnotesize\ttfamily void Main\+Initalizer\+::setup (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Creates most game objects. 
+
+Creates and initializes scene manager, root, camera, light, UI, frame listeners and main game objects \begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{class_main_initalizer_a9d31b7943f71f7f5105dfd076b5fb6a6}{create\+Scene()}} \mbox{\hyperlink{class_main_initalizer_a992dc59e0ba493af8f502f4c86f2c732}{create\+Camera()}} \mbox{\hyperlink{class_main_initalizer_aff688c57f55fd062250fc23f6767373d}{Create\+Trays\+And\+Labels()}} \mbox{\hyperlink{class_main_initalizer_a0f61e56303d3bc0748ede0ffd95ef040}{create\+Frame\+Listener()}} 
+\end{DoxySeeAlso}

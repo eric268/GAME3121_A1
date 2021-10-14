@@ -1,5 +1,6 @@
 #include "GameObject.h"
 
+//Getters
 Ogre::Vector3 GameObject::GetVelocity()
 {
 	return m_vVelocity;

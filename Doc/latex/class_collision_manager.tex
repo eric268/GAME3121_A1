@@ -1,0 +1,50 @@
+\hypertarget{class_collision_manager}{}\doxysection{Collision\+Manager Class Reference}
+\label{class_collision_manager}\index{CollisionManager@{CollisionManager}}
+
+
+Contains all collision functions.  
+
+
+
+
+{\ttfamily \#include $<$Collision\+Manager.\+h$>$}
+
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static bool \mbox{\hyperlink{class_collision_manager_acc0f7fa0dfd29d004d6492926586a3ac}{AABBSphere}} (\mbox{\hyperlink{class_game_object}{Game\+Object}} $\ast$cube, \mbox{\hyperlink{class_game_object}{Game\+Object}} $\ast$sphere)
+\begin{DoxyCompactList}\small\item\em Checks collision between and AABB and a sphere. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Contains all collision functions. 
+
+Class with only static functions to be used as a manager for collision functions. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_collision_manager_acc0f7fa0dfd29d004d6492926586a3ac}\label{class_collision_manager_acc0f7fa0dfd29d004d6492926586a3ac}} 
+\index{CollisionManager@{CollisionManager}!AABBSphere@{AABBSphere}}
+\index{AABBSphere@{AABBSphere}!CollisionManager@{CollisionManager}}
+\doxysubsubsection{\texorpdfstring{AABBSphere()}{AABBSphere()}}
+{\footnotesize\ttfamily bool Collision\+Manager\+::\+AABBSphere (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_game_object}{Game\+Object}} $\ast$}]{cube,  }\item[{\mbox{\hyperlink{class_game_object}{Game\+Object}} $\ast$}]{sphere }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Checks collision between and AABB and a sphere. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cube} & is the AABB to be checked against. \\
+\hline
+{\em sphere} & is the sphere to be checked against. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns true if the two objects collide and false if not. 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+This also sets the spheres Is\+Colliding() variable to either true or false. 
+\end{DoxyNote}
+\begin{DoxyWarning}{Warning}
+This will throw a bad allocation exception if sphere is not a \mbox{\hyperlink{class_pong_ball}{Pong\+Ball}} type. The reason I leave it as a game object parameter is that if more spheres are later added into the game I can do future checking to see if their class types as spheres as well. This allows for more saleability of this function. 
+\end{DoxyWarning}
