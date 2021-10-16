@@ -25,6 +25,10 @@
 var NAVTREE =
 [
   [ "GAME3121 Assignment 1 Eric Galway 101252535 Pong Game", "index.html", [
+    [ "Pong Game", "index.html", [
+      [ "Game made for GAME3121 at George Brown College F2021", "index.html#Pong", null ]
+    ] ],
+    [ "ReadMe", "md__g_a_m_e3121__a1__orgre_template_v2__orgre_template_v2__read_me.html", null ],
     [ "Classes", "annotated.html", [
       [ "Class List", "annotated.html", "annotated_dup" ],
       [ "Class Index", "classes.html", null ],

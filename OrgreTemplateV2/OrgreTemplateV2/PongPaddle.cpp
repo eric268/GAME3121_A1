@@ -18,6 +18,7 @@ PongPaddle::PongPaddle()
 
 PongPaddle::PongPaddle(Ogre::SceneNode* player, Ogre::SceneManager* scnMgr)
 {
+
 	SetEntity(scnMgr->createEntity("Player1Entity", "cube.mesh"));
 	GetEntity()->setCastShadows(false);
 	SetSceneNode(player);
